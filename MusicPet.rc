@@ -1,0 +1,15 @@
+#pragma code_page(65001)
+#include <windows.h>
+1 ICON "MusicPet.ico"
+1 RT_MANIFEST "MusicPet.manifest"
+
+101 DIALOGEX 0, 0, 246, 90
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "自定义皮肤名称"
+FONT 9, "Microsoft YaHei UI"
+BEGIN
+    LTEXT "名称将显示在桌宠形象列表中：", -1, 12, 10, 220, 12
+    EDITTEXT 1001, 12, 28, 222, 15, ES_AUTOHSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON "确定", IDOK, 126, 62, 50, 16
+    PUSHBUTTON "取消", IDCANCEL, 184, 62, 50, 16
+END

@@ -1,0 +1,11 @@
+{
+  "status": "Valid",
+  "signer": "CN=LvWei",
+  "thumbprint": "A3CE79747720194299E422046E6C683401B47D92",
+  "expires": "2029-10-20T00:07:48.0000000+08:00",
+  "algorithm": "SHA256",
+  "trustScope": "CurrentUser Root and TrustedPublisher",
+  "privateKeyExported": false,
+  "timestamped": false,
+  "sha256": "625F2ACEEA023B4C557EED0D164277BCDB04833AADCAC37326F2A0146E7464C7"
+}

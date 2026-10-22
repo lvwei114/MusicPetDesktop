@@ -1,0 +1,5 @@
+PASS: presets copy, byte dedup, collision preservation, Unicode names and invalid image rejection
+PASS: adaptive layout bounds across size, aspect ratio and DPI
+PASS: launch path, palette mode and shortcut preference persistence
+PASS: bounded discovery, valid candidates and missing-target failure (1 candidates, 62 ms)
+PASS: note glyphs and both palette modes rendered

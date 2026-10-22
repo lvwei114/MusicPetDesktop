@@ -1,0 +1,16 @@
+{
+  "archive": "E:\\Claude works\\MusicPet\\releases\\MusicPet-2026.10.20-win-x64.zip",
+  "bytes": 2360661,
+  "sha256": "e005356c278bd4d81ce2dec3294ee07667ab01f2c09ceaaa23fa6a9203b92465",
+  "exeSha256": "d5b4e1e669ddb783bde64a1a1e08f8d4c38003d2650d76a23e02bc1bd8a5008e",
+  "files": [
+    "MusicPet.exe",
+    "启动桌宠.cmd",
+    "恢复桌宠.cmd",
+    "预览效果.cmd",
+    "skins/Ellie.png",
+    "使用说明.txt",
+    "SHA256SUMS.txt"
+  ],
+  "zipVerified": true
+}

@@ -1,0 +1,4 @@
+regular window ADD=0 error=5 sizeof=976 hwnd=0000000009F20D92
+compat size=168 ADD=0 error=5
+compat size=952 ADD=0 error=5
+compat size=968 ADD=0 error=5

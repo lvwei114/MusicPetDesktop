@@ -1,0 +1,13 @@
+{
+  "window_creation": true,
+  "panel_size": [
+    602,
+    836
+  ],
+  "effects_always_clickthrough": true,
+  "clickthrough_and_recovery": true,
+  "effects_stop_and_release_timer": true,
+  "escape_dismiss": true,
+  "rightclick_reopen": true,
+  "clean_shutdown": true
+}
