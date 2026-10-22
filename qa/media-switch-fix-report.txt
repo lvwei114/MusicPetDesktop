@@ -1,0 +1,14 @@
+PASS: real Windows SMTC session enumeration, metadata and playing state
+PASS: supported controls and timeline
+PASS: continuous progress from sparse publisher timeline
+PASS: pause request reaches publisher and paused state returns
+PASS: paused progress stays fixed
+PASS: play request and returned state
+PASS: resume and seek correction
+PASS: playback rate extrapolation
+PASS: next-track command and refreshed title
+PASS: short session gap preserves title, hides stale timeline, disables/drops controls; recovery 63 ms
+PASS: metadata event refresh 62 ms
+PASS: pinned session disappearance does not fall back to another app
+PASS: same-app recreated session rebinds; missing timeline stays unknown
+PASS: clean worker shutdown

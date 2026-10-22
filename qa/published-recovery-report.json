@@ -1,0 +1,11 @@
+{
+  "occupied_default_falls_back": 2,
+  "tray_registered": true,
+  "real_fallback_keypress": true,
+  "tray_missing_entry_retried": true,
+  "taskbar_created_recovery": true,
+  "tray_opens_panel": true,
+  "safe_start_when_tray_and_hotkeys_unavailable": false,
+  "all_shortcuts_occupied_relaunch_recovers": true,
+  "disabled_shortcut_explicit_recovery": true
+}

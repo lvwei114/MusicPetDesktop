@@ -1,0 +1,2285 @@
+Read-only trace of unmodified media algorithm; monotonic timestamps in ms
+467082484 STAGE tick-start
+467082484 STAGE manager
+467082515 STAGE enumerate
+467082515 SESSION_COUNT 1
+467082515 STAGE enum-playback
+467082515 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467082515 CHOSEN  wanted= app=
+467082515 STAGE chosen-playback
+467082515 STAGE metadata-begin
+467082531 STAGE metadata-end
+467082531 STAGE timeline
+467082531 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467083187 STAGE tick-start
+467083187 STAGE manager
+467083203 STAGE enumerate
+467083203 SESSION_COUNT 1
+467083203 STAGE enum-playback
+467083203 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467083203 CHOSEN  wanted= app=
+467083203 STAGE chosen-playback
+467083203 STAGE metadata-begin
+467083203 STAGE metadata-end
+467083218 STAGE timeline
+467083218 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467083859 STAGE tick-start
+467083875 STAGE manager
+467083875 STAGE enumerate
+467083875 SESSION_COUNT 1
+467083875 STAGE enum-playback
+467083875 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467083875 CHOSEN  wanted= app=
+467083875 STAGE chosen-playback
+467083875 STAGE metadata-begin
+467083875 STAGE metadata-end
+467083875 STAGE timeline
+467083875 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467084531 STAGE tick-start
+467084531 STAGE manager
+467084531 STAGE enumerate
+467084531 SESSION_COUNT 1
+467084546 STAGE enum-playback
+467084546 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467084546 CHOSEN  wanted= app=
+467084546 STAGE chosen-playback
+467084546 STAGE metadata-begin
+467084546 STAGE metadata-end
+467084546 STAGE timeline
+467084546 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467085203 STAGE tick-start
+467085203 STAGE manager
+467085203 STAGE enumerate
+467085203 SESSION_COUNT 1
+467085203 STAGE enum-playback
+467085203 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467085203 CHOSEN  wanted= app=
+467085203 STAGE chosen-playback
+467085218 STAGE metadata-begin
+467085218 STAGE metadata-end
+467085218 STAGE timeline
+467085218 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467085875 STAGE tick-start
+467085875 STAGE manager
+467085875 STAGE enumerate
+467085875 SESSION_COUNT 1
+467085875 STAGE enum-playback
+467085875 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467085875 CHOSEN  wanted= app=
+467085875 STAGE chosen-playback
+467085875 STAGE metadata-begin
+467085890 STAGE metadata-end
+467085890 STAGE timeline
+467085890 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467086546 STAGE tick-start
+467086546 STAGE manager
+467086546 STAGE enumerate
+467086546 SESSION_COUNT 1
+467086546 STAGE enum-playback
+467086546 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467086562 CHOSEN  wanted= app=
+467086562 STAGE chosen-playback
+467086562 STAGE metadata-begin
+467086562 STAGE metadata-end
+467086562 STAGE timeline
+467086562 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467087218 STAGE tick-start
+467087218 STAGE manager
+467087218 STAGE enumerate
+467087218 SESSION_COUNT 1
+467087218 STAGE enum-playback
+467087218 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467087234 CHOSEN  wanted= app=
+467087234 STAGE chosen-playback
+467087234 STAGE metadata-begin
+467087234 STAGE metadata-end
+467087234 STAGE timeline
+467087234 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467087906 STAGE tick-start
+467087906 STAGE manager
+467087906 STAGE enumerate
+467087906 SESSION_COUNT 1
+467087906 STAGE enum-playback
+467087906 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467087921 CHOSEN  wanted= app=
+467087921 STAGE chosen-playback
+467087921 STAGE metadata-begin
+467087921 STAGE metadata-end
+467087921 STAGE timeline
+467087921 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467088593 STAGE tick-start
+467088593 STAGE manager
+467088593 STAGE enumerate
+467088593 SESSION_COUNT 1
+467088593 STAGE enum-playback
+467088609 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467088609 CHOSEN  wanted= app=
+467088609 STAGE chosen-playback
+467088609 STAGE metadata-begin
+467088609 STAGE metadata-end
+467088625 STAGE timeline
+467088625 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467089281 STAGE tick-start
+467089281 STAGE manager
+467089281 STAGE enumerate
+467089281 SESSION_COUNT 1
+467089296 STAGE enum-playback
+467089296 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467089296 CHOSEN  wanted= app=
+467089296 STAGE chosen-playback
+467089312 STAGE metadata-begin
+467089312 STAGE metadata-end
+467089312 STAGE timeline
+467089312 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467089984 STAGE tick-start
+467089984 STAGE manager
+467089984 STAGE enumerate
+467089984 SESSION_COUNT 1
+467089984 STAGE enum-playback
+467089984 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467089984 CHOSEN  wanted= app=
+467089984 STAGE chosen-playback
+467090000 STAGE metadata-begin
+467090000 STAGE metadata-end
+467090000 STAGE timeline
+467090000 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467090656 STAGE tick-start
+467090656 STAGE manager
+467090656 STAGE enumerate
+467090671 SESSION_COUNT 1
+467090671 STAGE enum-playback
+467090671 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467090671 CHOSEN  wanted= app=
+467090671 STAGE chosen-playback
+467090671 STAGE metadata-begin
+467090687 STAGE metadata-end
+467090687 STAGE timeline
+467090687 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467091343 STAGE tick-start
+467091343 STAGE manager
+467091343 STAGE enumerate
+467091343 SESSION_COUNT 1
+467091343 STAGE enum-playback
+467091359 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467091359 CHOSEN  wanted= app=
+467091359 STAGE chosen-playback
+467091359 STAGE metadata-begin
+467091359 STAGE metadata-end
+467091359 STAGE timeline
+467091375 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467092031 STAGE tick-start
+467092031 STAGE manager
+467092031 STAGE enumerate
+467092031 SESSION_COUNT 1
+467092031 STAGE enum-playback
+467092031 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467092031 CHOSEN  wanted= app=
+467092046 STAGE chosen-playback
+467092046 STAGE metadata-begin
+467092046 STAGE metadata-end
+467092046 STAGE timeline
+467092046 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467092718 STAGE tick-start
+467092718 STAGE manager
+467092718 STAGE enumerate
+467092718 SESSION_COUNT 1
+467092718 STAGE enum-playback
+467092734 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467092734 CHOSEN  wanted= app=
+467092734 STAGE chosen-playback
+467092734 STAGE metadata-begin
+467092734 STAGE metadata-end
+467092734 STAGE timeline
+467092734 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467093406 STAGE tick-start
+467093406 STAGE manager
+467093421 STAGE enumerate
+467093421 SESSION_COUNT 1
+467093421 STAGE enum-playback
+467093437 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467093437 CHOSEN  wanted= app=
+467093453 STAGE chosen-playback
+467093453 STAGE metadata-begin
+467093468 STAGE metadata-end
+467093468 STAGE timeline
+467093468 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467094125 STAGE tick-start
+467094140 STAGE manager
+467094140 STAGE enumerate
+467094140 SESSION_COUNT 1
+467094140 STAGE enum-playback
+467094140 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467094140 CHOSEN  wanted= app=
+467094156 STAGE chosen-playback
+467094156 STAGE metadata-begin
+467094156 STAGE metadata-end
+467094156 STAGE timeline
+467094156 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467094828 STAGE tick-start
+467094828 STAGE manager
+467094828 STAGE enumerate
+467094828 SESSION_COUNT 1
+467094843 STAGE enum-playback
+467094843 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467094843 CHOSEN  wanted= app=
+467094843 STAGE chosen-playback
+467094843 STAGE metadata-begin
+467094859 STAGE metadata-end
+467094859 STAGE timeline
+467094859 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467095515 STAGE tick-start
+467095515 STAGE manager
+467095531 STAGE enumerate
+467095531 SESSION_COUNT 1
+467095531 STAGE enum-playback
+467095531 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467095531 CHOSEN  wanted= app=
+467095531 STAGE chosen-playback
+467095531 STAGE metadata-begin
+467095546 STAGE metadata-end
+467095546 STAGE timeline
+467095546 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467096203 STAGE tick-start
+467096203 STAGE manager
+467096203 STAGE enumerate
+467096203 SESSION_COUNT 1
+467096218 STAGE enum-playback
+467096218 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467096218 CHOSEN  wanted= app=
+467096218 STAGE chosen-playback
+467096218 STAGE metadata-begin
+467096218 STAGE metadata-end
+467096218 STAGE timeline
+467096218 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467096890 STAGE tick-start
+467096890 STAGE manager
+467096890 STAGE enumerate
+467096890 SESSION_COUNT 1
+467096906 STAGE enum-playback
+467096906 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467096906 CHOSEN  wanted= app=
+467096906 STAGE chosen-playback
+467096906 STAGE metadata-begin
+467096906 STAGE metadata-end
+467096906 STAGE timeline
+467096921 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467097562 STAGE tick-start
+467097562 STAGE manager
+467097578 STAGE enumerate
+467097578 SESSION_COUNT 1
+467097578 STAGE enum-playback
+467097578 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467097578 CHOSEN  wanted= app=
+467097578 STAGE chosen-playback
+467097593 STAGE metadata-begin
+467097593 STAGE metadata-end
+467097593 STAGE timeline
+467097593 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467098250 STAGE tick-start
+467098250 STAGE manager
+467098265 STAGE enumerate
+467098265 SESSION_COUNT 1
+467098265 STAGE enum-playback
+467098265 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467098265 CHOSEN  wanted= app=
+467098281 STAGE chosen-playback
+467098281 STAGE metadata-begin
+467098281 STAGE metadata-end
+467098281 STAGE timeline
+467098281 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467098937 STAGE tick-start
+467098953 STAGE manager
+467098953 STAGE enumerate
+467098953 SESSION_COUNT 1
+467098953 STAGE enum-playback
+467098953 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467098953 CHOSEN  wanted= app=
+467098968 STAGE chosen-playback
+467098968 STAGE metadata-begin
+467098968 STAGE metadata-end
+467098968 STAGE timeline
+467098968 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467099625 STAGE tick-start
+467099625 STAGE manager
+467099640 STAGE enumerate
+467099640 SESSION_COUNT 1
+467099640 STAGE enum-playback
+467099640 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467099640 CHOSEN  wanted= app=
+467099640 STAGE chosen-playback
+467099656 STAGE metadata-begin
+467099656 STAGE metadata-end
+467099656 STAGE timeline
+467099656 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467100312 STAGE tick-start
+467100312 STAGE manager
+467100312 STAGE enumerate
+467100312 SESSION_COUNT 1
+467100328 STAGE enum-playback
+467100328 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467100328 CHOSEN  wanted= app=
+467100343 STAGE chosen-playback
+467100343 STAGE metadata-begin
+467100343 STAGE metadata-end
+467100343 STAGE timeline
+467100343 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467101000 STAGE tick-start
+467101000 STAGE manager
+467101015 STAGE enumerate
+467101015 SESSION_COUNT 1
+467101015 STAGE enum-playback
+467101015 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467101015 CHOSEN  wanted= app=
+467101031 STAGE chosen-playback
+467101031 STAGE metadata-begin
+467101031 STAGE metadata-end
+467101031 STAGE timeline
+467101031 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467101687 STAGE tick-start
+467101687 STAGE manager
+467101703 STAGE enumerate
+467101703 SESSION_COUNT 1
+467101703 STAGE enum-playback
+467101703 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467101718 CHOSEN  wanted= app=
+467101718 STAGE chosen-playback
+467101718 STAGE metadata-begin
+467101734 STAGE metadata-end
+467101734 STAGE timeline
+467101734 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467102406 STAGE tick-start
+467102406 STAGE manager
+467102421 STAGE enumerate
+467102421 SESSION_COUNT 1
+467102421 STAGE enum-playback
+467102421 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467102421 CHOSEN  wanted= app=
+467102421 STAGE chosen-playback
+467102437 STAGE metadata-begin
+467102437 STAGE metadata-end
+467102437 STAGE timeline
+467102437 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467103109 STAGE tick-start
+467103125 STAGE manager
+467103125 STAGE enumerate
+467103125 SESSION_COUNT 1
+467103125 STAGE enum-playback
+467103125 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467103140 CHOSEN  wanted= app=
+467103140 STAGE chosen-playback
+467103140 STAGE metadata-begin
+467103140 STAGE metadata-end
+467103140 STAGE timeline
+467103156 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467103812 STAGE tick-start
+467103812 STAGE manager
+467103812 STAGE enumerate
+467103812 SESSION_COUNT 1
+467103828 STAGE enum-playback
+467103828 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467103828 CHOSEN  wanted= app=
+467103828 STAGE chosen-playback
+467103828 STAGE metadata-begin
+467103828 STAGE metadata-end
+467103843 STAGE timeline
+467103843 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467104500 STAGE tick-start
+467104500 STAGE manager
+467104500 STAGE enumerate
+467104500 SESSION_COUNT 1
+467104500 STAGE enum-playback
+467104500 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467104500 CHOSEN  wanted= app=
+467104500 STAGE chosen-playback
+467104515 STAGE metadata-begin
+467104515 STAGE metadata-end
+467104515 STAGE timeline
+467104515 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467105187 STAGE tick-start
+467105187 STAGE manager
+467105187 STAGE enumerate
+467105187 SESSION_COUNT 1
+467105187 STAGE enum-playback
+467105187 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467105187 CHOSEN  wanted= app=
+467105203 STAGE chosen-playback
+467105203 STAGE metadata-begin
+467105203 STAGE metadata-end
+467105203 STAGE timeline
+467105203 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467105859 STAGE tick-start
+467105859 STAGE manager
+467105859 STAGE enumerate
+467105859 SESSION_COUNT 1
+467105859 STAGE enum-playback
+467105859 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467105875 CHOSEN  wanted= app=
+467105875 STAGE chosen-playback
+467105875 STAGE metadata-begin
+467105875 STAGE metadata-end
+467105875 STAGE timeline
+467105875 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467106546 STAGE tick-start
+467106546 STAGE manager
+467106546 STAGE enumerate
+467106546 SESSION_COUNT 1
+467106546 STAGE enum-playback
+467106546 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467106562 CHOSEN  wanted= app=
+467106562 STAGE chosen-playback
+467106562 STAGE metadata-begin
+467106562 STAGE metadata-end
+467106562 STAGE timeline
+467106562 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467107234 STAGE tick-start
+467107250 STAGE manager
+467107250 STAGE enumerate
+467107250 SESSION_COUNT 1
+467107250 STAGE enum-playback
+467107250 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467107250 CHOSEN  wanted= app=
+467107265 STAGE chosen-playback
+467107265 STAGE metadata-begin
+467107265 STAGE metadata-end
+467107265 STAGE timeline
+467107265 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467107937 STAGE tick-start
+467107937 STAGE manager
+467107937 STAGE enumerate
+467107937 SESSION_COUNT 1
+467107937 STAGE enum-playback
+467107937 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467107937 CHOSEN  wanted= app=
+467107953 STAGE chosen-playback
+467107953 STAGE metadata-begin
+467107953 STAGE metadata-end
+467107953 STAGE timeline
+467107953 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467108625 STAGE tick-start
+467108625 STAGE manager
+467108625 STAGE enumerate
+467108625 SESSION_COUNT 1
+467108625 STAGE enum-playback
+467108625 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467108625 CHOSEN  wanted= app=
+467108625 STAGE chosen-playback
+467108640 STAGE metadata-begin
+467108656 STAGE metadata-end
+467108656 STAGE timeline
+467108656 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467109328 STAGE tick-start
+467109328 STAGE manager
+467109328 STAGE enumerate
+467109328 SESSION_COUNT 1
+467109328 STAGE enum-playback
+467109343 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467109343 CHOSEN  wanted= app=
+467109343 STAGE chosen-playback
+467109343 STAGE metadata-begin
+467109343 STAGE metadata-end
+467109343 STAGE timeline
+467109343 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467110015 STAGE tick-start
+467110015 STAGE manager
+467110015 STAGE enumerate
+467110015 SESSION_COUNT 1
+467110015 STAGE enum-playback
+467110031 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467110031 CHOSEN  wanted= app=
+467110031 STAGE chosen-playback
+467110031 STAGE metadata-begin
+467110031 STAGE metadata-end
+467110031 STAGE timeline
+467110046 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467110703 STAGE tick-start
+467110703 STAGE manager
+467110703 STAGE enumerate
+467110703 SESSION_COUNT 1
+467110703 STAGE enum-playback
+467110703 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467110703 CHOSEN  wanted= app=
+467110703 STAGE chosen-playback
+467110718 STAGE metadata-begin
+467110718 STAGE metadata-end
+467110718 STAGE timeline
+467110718 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467111375 STAGE tick-start
+467111375 STAGE manager
+467111375 STAGE enumerate
+467111375 SESSION_COUNT 1
+467111375 STAGE enum-playback
+467111390 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467111390 CHOSEN  wanted= app=
+467111390 STAGE chosen-playback
+467111390 STAGE metadata-begin
+467111390 STAGE metadata-end
+467111390 STAGE timeline
+467111406 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467112062 STAGE tick-start
+467112062 STAGE manager
+467112062 STAGE enumerate
+467112062 SESSION_COUNT 1
+467112062 STAGE enum-playback
+467112062 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467112078 CHOSEN  wanted= app=
+467112078 STAGE chosen-playback
+467112078 STAGE metadata-begin
+467112078 STAGE metadata-end
+467112078 STAGE timeline
+467112093 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467112750 STAGE tick-start
+467112750 STAGE manager
+467112750 STAGE enumerate
+467112750 SESSION_COUNT 1
+467112750 STAGE enum-playback
+467112750 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467112750 CHOSEN  wanted= app=
+467112750 STAGE chosen-playback
+467112750 STAGE metadata-begin
+467112750 STAGE metadata-end
+467112750 STAGE timeline
+467112765 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467113421 STAGE tick-start
+467113421 STAGE manager
+467113421 STAGE enumerate
+467113421 SESSION_COUNT 1
+467113421 STAGE enum-playback
+467113421 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467113421 CHOSEN  wanted= app=
+467113421 STAGE chosen-playback
+467113437 STAGE metadata-begin
+467113437 STAGE metadata-end
+467113437 STAGE timeline
+467113437 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467114093 STAGE tick-start
+467114093 STAGE manager
+467114093 STAGE enumerate
+467114093 SESSION_COUNT 1
+467114109 STAGE enum-playback
+467114109 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467114109 CHOSEN  wanted= app=
+467114109 STAGE chosen-playback
+467114109 STAGE metadata-begin
+467114109 STAGE metadata-end
+467114109 STAGE timeline
+467114109 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467114765 STAGE tick-start
+467114765 STAGE manager
+467114781 STAGE enumerate
+467114781 SESSION_COUNT 1
+467114781 STAGE enum-playback
+467114781 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467114781 CHOSEN  wanted= app=
+467114781 STAGE chosen-playback
+467114781 STAGE metadata-begin
+467114781 STAGE metadata-end
+467114796 STAGE timeline
+467114796 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467115453 STAGE tick-start
+467115453 STAGE manager
+467115453 STAGE enumerate
+467115468 SESSION_COUNT 1
+467115468 STAGE enum-playback
+467115468 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467115468 CHOSEN  wanted= app=
+467115468 STAGE chosen-playback
+467115468 STAGE metadata-begin
+467115468 STAGE metadata-end
+467115468 STAGE timeline
+467115468 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467116140 STAGE tick-start
+467116140 STAGE manager
+467116140 STAGE enumerate
+467116140 SESSION_COUNT 1
+467116140 STAGE enum-playback
+467116156 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467116156 CHOSEN  wanted= app=
+467116156 STAGE chosen-playback
+467116156 STAGE metadata-begin
+467116156 STAGE metadata-end
+467116156 STAGE timeline
+467116171 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467116828 STAGE tick-start
+467116828 STAGE manager
+467116828 STAGE enumerate
+467116828 SESSION_COUNT 1
+467116828 STAGE enum-playback
+467116828 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467116828 CHOSEN  wanted= app=
+467116843 STAGE chosen-playback
+467116843 STAGE metadata-begin
+467116843 STAGE metadata-end
+467116843 STAGE timeline
+467116843 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467117515 STAGE tick-start
+467117515 STAGE manager
+467117515 STAGE enumerate
+467117515 SESSION_COUNT 1
+467117515 STAGE enum-playback
+467117515 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467117515 CHOSEN  wanted= app=
+467117531 STAGE chosen-playback
+467117531 STAGE metadata-begin
+467117531 STAGE metadata-end
+467117531 STAGE timeline
+467117531 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467118187 STAGE tick-start
+467118203 STAGE manager
+467118203 STAGE enumerate
+467118203 SESSION_COUNT 1
+467118203 STAGE enum-playback
+467118203 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467118203 CHOSEN  wanted= app=
+467118203 STAGE chosen-playback
+467118218 STAGE metadata-begin
+467118218 STAGE metadata-end
+467118218 STAGE timeline
+467118218 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467118875 STAGE tick-start
+467118875 STAGE manager
+467118875 STAGE enumerate
+467118890 SESSION_COUNT 1
+467118890 STAGE enum-playback
+467118890 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467118890 CHOSEN  wanted= app=
+467118906 STAGE chosen-playback
+467118906 STAGE metadata-begin
+467118906 STAGE metadata-end
+467118906 STAGE timeline
+467118906 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467119578 STAGE tick-start
+467119578 STAGE manager
+467119578 STAGE enumerate
+467119593 SESSION_COUNT 1
+467119593 STAGE enum-playback
+467119593 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467119593 CHOSEN  wanted= app=
+467119593 STAGE chosen-playback
+467119593 STAGE metadata-begin
+467119593 STAGE metadata-end
+467119593 STAGE timeline
+467119609 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467120265 STAGE tick-start
+467120265 STAGE manager
+467120265 STAGE enumerate
+467120265 SESSION_COUNT 1
+467120281 STAGE enum-playback
+467120281 SESSION MusicFree.exe id=MusicFree.exe#1 state=2
+467120281 CHOSEN  wanted= app=
+467120281 STAGE chosen-playback
+467120281 STAGE metadata-begin
+467120281 STAGE metadata-end
+467120281 STAGE timeline
+467120281 PUBLISH valid=1 id= title=洛天依，言和原创《深夜诗人》 pos=1.278643 dur=195.263833
+467120953 STAGE tick-start
+467120953 STAGE manager
+467120953 STAGE enumerate
+467120953 SESSION_COUNT 1
+467120953 STAGE enum-playback
+467120953 SESSION MusicFree.exe id=MusicFree.exe#1 state=1
+467120968 CHOSEN MusicFree.exe#1 wanted= app=
+467120968 STAGE chosen-playback
+467120968 STAGE metadata-begin
+467120968 STAGE metadata-end
+467120968 STAGE timeline
+467120984 PUBLISH valid=1 id=MusicFree.exe#1 title=洛天依，言和原创《深夜诗人》 pos=1.510080 dur=195.263833
+467121015 STAGE tick-start
+467121015 STAGE manager
+467121015 STAGE enumerate
+467121015 SESSION_COUNT 1
+467121015 STAGE enum-playback
+467121031 SESSION MusicFree.exe id=MusicFree.exe#1 state=1
+467121031 CHOSEN MusicFree.exe#1 wanted=MusicFree.exe#1 app=MusicFree.exe
+467121031 STAGE chosen-playback
+467121031 STAGE timeline
+467121031 PUBLISH valid=1 id=MusicFree.exe#1 title=洛天依，言和原创《深夜诗人》 pos=1.573079 dur=195.263833
+467121703 STAGE tick-start
+467121703 STAGE manager
+467121703 STAGE enumerate
+467121703 SESSION_COUNT 1
+467121703 STAGE enum-playback
+467121703 SESSION MusicFree.exe id=MusicFree.exe#1 state=1
+467121718 CHOSEN MusicFree.exe#1 wanted=MusicFree.exe#1 app=MusicFree.exe
+467121718 STAGE chosen-playback
+467121718 STAGE metadata-begin
+467121718 STAGE metadata-end
+467121718 STAGE timeline
+467121734 PUBLISH valid=1 id=MusicFree.exe#1 title=洛天依，言和原创《深夜诗人》 pos=2.260079 dur=195.263833
+467122375 STAGE tick-start
+467122390 STAGE manager
+467122390 STAGE enumerate
+467122390 SESSION_COUNT 1
+467122390 STAGE enum-playback
+467122390 SESSION MusicFree.exe id=MusicFree.exe#1 state=1
+467122390 CHOSEN MusicFree.exe#1 wanted=MusicFree.exe#1 app=MusicFree.exe
+467122390 STAGE chosen-playback
+467122390 STAGE metadata-begin
+467122406 STAGE metadata-end
+467122406 STAGE timeline
+467122406 PUBLISH valid=1 id=MusicFree.exe#1 title=洛天依，言和原创《深夜诗人》 pos=2.948079 dur=195.263833
+467123062 STAGE tick-start
+467123078 STAGE manager
+467123078 STAGE enumerate
+467123078 SESSION_COUNT 0
+467123078 CHOSEN  wanted=MusicFree.exe#1 app=MusicFree.exe
+467123078 PUBLISH valid=0 id= title= pos=0.000000 dur=0.000000
+467123734 STAGE tick-start
+467123734 STAGE manager
+467123734 STAGE enumerate
+467123734 SESSION_COUNT 1
+467123750 STAGE enum-playback
+467123750 SESSION MusicFree.exe id=MusicFree.exe#2 state=1
+467123750 CHOSEN MusicFree.exe#2 wanted=MusicFree.exe#1 app=MusicFree.exe
+467123750 STAGE chosen-playback
+467123750 STAGE metadata-begin
+467123750 STAGE metadata-end
+467123750 STAGE timeline
+467123750 PUBLISH valid=1 id=MusicFree.exe#2 title=I . I . I D I O T pos=0.635991 dur=256.185533
+467124421 STAGE tick-start
+467124421 STAGE manager
+467124421 STAGE enumerate
+467124421 SESSION_COUNT 1
+467124437 STAGE enum-playback
+467124437 SESSION MusicFree.exe id=MusicFree.exe#2 state=1
+467124437 CHOSEN MusicFree.exe#2 wanted=MusicFree.exe#2 app=MusicFree.exe
+467124437 STAGE chosen-playback
+467124437 STAGE metadata-begin
+467124437 STAGE metadata-end
+467124453 STAGE timeline
+467124453 PUBLISH valid=1 id=MusicFree.exe#2 title=I . I . I D I O T pos=1.338991 dur=256.185533
+467125109 STAGE tick-start
+467125109 STAGE manager
+467125109 STAGE enumerate
+467125125 SESSION_COUNT 0
+467125125 CHOSEN  wanted=MusicFree.exe#2 app=MusicFree.exe
+467125125 PUBLISH valid=0 id= title= pos=0.000000 dur=0.000000
+467125781 STAGE tick-start
+467125781 STAGE manager
+467125781 STAGE enumerate
+467125781 SESSION_COUNT 1
+467125796 STAGE enum-playback
+467125796 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467125796 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#2 app=MusicFree.exe
+467125796 STAGE chosen-playback
+467125796 STAGE metadata-begin
+467125796 STAGE metadata-end
+467125796 STAGE timeline
+467125796 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=0.103122 dur=194.583356
+467126468 STAGE tick-start
+467126468 STAGE manager
+467126484 STAGE enumerate
+467126484 SESSION_COUNT 1
+467126484 STAGE enum-playback
+467126484 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467126484 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467126484 STAGE chosen-playback
+467126484 STAGE metadata-begin
+467126484 STAGE metadata-end
+467126500 STAGE timeline
+467126500 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=0.807122 dur=194.583356
+467127156 STAGE tick-start
+467127156 STAGE manager
+467127171 STAGE enumerate
+467127171 SESSION_COUNT 1
+467127171 STAGE enum-playback
+467127171 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467127171 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467127171 STAGE chosen-playback
+467127171 STAGE metadata-begin
+467127187 STAGE metadata-end
+467127187 STAGE timeline
+467127187 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=1.494123 dur=194.583356
+467127843 STAGE tick-start
+467127843 STAGE manager
+467127843 STAGE enumerate
+467127843 SESSION_COUNT 1
+467127859 STAGE enum-playback
+467127859 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467127859 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467127859 STAGE chosen-playback
+467127859 STAGE metadata-begin
+467127859 STAGE metadata-end
+467127859 STAGE timeline
+467127875 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=2.166123 dur=194.583356
+467128531 STAGE tick-start
+467128531 STAGE manager
+467128531 STAGE enumerate
+467128546 SESSION_COUNT 1
+467128546 STAGE enum-playback
+467128546 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467128546 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467128546 STAGE chosen-playback
+467128546 STAGE metadata-begin
+467128562 STAGE metadata-end
+467128562 STAGE timeline
+467128562 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=2.869123 dur=194.583356
+467129218 STAGE tick-start
+467129218 STAGE manager
+467129218 STAGE enumerate
+467129218 SESSION_COUNT 1
+467129218 STAGE enum-playback
+467129218 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467129218 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467129218 STAGE chosen-playback
+467129234 STAGE metadata-begin
+467129234 STAGE metadata-end
+467129234 STAGE timeline
+467129234 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=3.541123 dur=194.583356
+467129890 STAGE tick-start
+467129890 STAGE manager
+467129890 STAGE enumerate
+467129890 SESSION_COUNT 1
+467129890 STAGE enum-playback
+467129890 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467129890 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467129890 STAGE chosen-playback
+467129890 STAGE metadata-begin
+467129906 STAGE metadata-end
+467129906 STAGE timeline
+467129906 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=4.213122 dur=194.583356
+467130562 STAGE tick-start
+467130562 STAGE manager
+467130562 STAGE enumerate
+467130562 SESSION_COUNT 1
+467130562 STAGE enum-playback
+467130562 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467130562 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467130562 STAGE chosen-playback
+467130562 STAGE metadata-begin
+467130578 STAGE metadata-end
+467130578 STAGE timeline
+467130578 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=4.885122 dur=194.583356
+467131234 STAGE tick-start
+467131234 STAGE manager
+467131234 STAGE enumerate
+467131234 SESSION_COUNT 1
+467131234 STAGE enum-playback
+467131234 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467131250 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467131250 STAGE chosen-playback
+467131250 STAGE metadata-begin
+467131250 STAGE metadata-end
+467131250 STAGE timeline
+467131250 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=5.557122 dur=194.583356
+467131906 STAGE tick-start
+467131906 STAGE manager
+467131906 STAGE enumerate
+467131906 SESSION_COUNT 1
+467131906 STAGE enum-playback
+467131906 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467131906 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467131906 STAGE chosen-playback
+467131921 STAGE metadata-begin
+467131921 STAGE metadata-end
+467131921 STAGE timeline
+467131921 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=6.228122 dur=194.583356
+467132593 STAGE tick-start
+467132593 STAGE manager
+467132593 STAGE enumerate
+467132593 SESSION_COUNT 1
+467132593 STAGE enum-playback
+467132593 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467132593 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467132593 STAGE chosen-playback
+467132593 STAGE metadata-begin
+467132593 STAGE metadata-end
+467132609 STAGE timeline
+467132609 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=6.916122 dur=194.583356
+467133265 STAGE tick-start
+467133265 STAGE manager
+467133265 STAGE enumerate
+467133265 SESSION_COUNT 1
+467133265 STAGE enum-playback
+467133265 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467133265 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467133265 STAGE chosen-playback
+467133265 STAGE metadata-begin
+467133265 STAGE metadata-end
+467133265 STAGE timeline
+467133265 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=7.572122 dur=194.583356
+467133937 STAGE tick-start
+467133937 STAGE manager
+467133937 STAGE enumerate
+467133937 SESSION_COUNT 1
+467133937 STAGE enum-playback
+467133937 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467133937 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467133937 STAGE chosen-playback
+467133937 STAGE metadata-begin
+467133937 STAGE metadata-end
+467133937 STAGE timeline
+467133937 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=8.244122 dur=194.583356
+467134609 STAGE tick-start
+467134609 STAGE manager
+467134609 STAGE enumerate
+467134609 SESSION_COUNT 1
+467134609 STAGE enum-playback
+467134609 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467134609 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467134609 STAGE chosen-playback
+467134609 STAGE metadata-begin
+467134625 STAGE metadata-end
+467134625 STAGE timeline
+467134625 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=8.932123 dur=194.583356
+467135281 STAGE tick-start
+467135281 STAGE manager
+467135296 STAGE enumerate
+467135296 SESSION_COUNT 1
+467135296 STAGE enum-playback
+467135296 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467135296 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467135296 STAGE chosen-playback
+467135296 STAGE metadata-begin
+467135296 STAGE metadata-end
+467135296 STAGE timeline
+467135312 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=9.603122 dur=194.583356
+467135968 STAGE tick-start
+467135968 STAGE manager
+467135968 STAGE enumerate
+467135984 SESSION_COUNT 1
+467135984 STAGE enum-playback
+467135984 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467135984 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467135984 STAGE chosen-playback
+467135984 STAGE metadata-begin
+467135984 STAGE metadata-end
+467135984 STAGE timeline
+467135984 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=10.291123 dur=194.583356
+467136656 STAGE tick-start
+467136656 STAGE manager
+467136656 STAGE enumerate
+467136656 SESSION_COUNT 1
+467136656 STAGE enum-playback
+467136671 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467136671 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467136671 STAGE chosen-playback
+467136671 STAGE metadata-begin
+467136671 STAGE metadata-end
+467136671 STAGE timeline
+467136671 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=10.978122 dur=194.583356
+467137343 STAGE tick-start
+467137343 STAGE manager
+467137343 STAGE enumerate
+467137343 SESSION_COUNT 1
+467137343 STAGE enum-playback
+467137343 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467137359 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467137359 STAGE chosen-playback
+467137359 STAGE metadata-begin
+467137359 STAGE metadata-end
+467137359 STAGE timeline
+467137359 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=11.666123 dur=194.583356
+467138031 STAGE tick-start
+467138031 STAGE manager
+467138031 STAGE enumerate
+467138031 SESSION_COUNT 1
+467138031 STAGE enum-playback
+467138031 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467138046 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467138046 STAGE chosen-playback
+467138046 STAGE metadata-begin
+467138046 STAGE metadata-end
+467138046 STAGE timeline
+467138046 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=12.353122 dur=194.583356
+467138703 STAGE tick-start
+467138718 STAGE manager
+467138718 STAGE enumerate
+467138718 SESSION_COUNT 1
+467138718 STAGE enum-playback
+467138718 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467138718 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467138734 STAGE chosen-playback
+467138734 STAGE metadata-begin
+467138734 STAGE metadata-end
+467138734 STAGE timeline
+467138734 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=13.041123 dur=194.583356
+467139390 STAGE tick-start
+467139406 STAGE manager
+467139406 STAGE enumerate
+467139406 SESSION_COUNT 1
+467139406 STAGE enum-playback
+467139406 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467139421 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467139421 STAGE chosen-playback
+467139421 STAGE metadata-begin
+467139421 STAGE metadata-end
+467139421 STAGE timeline
+467139421 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=13.728122 dur=194.583356
+467140093 STAGE tick-start
+467140093 STAGE manager
+467140093 STAGE enumerate
+467140093 SESSION_COUNT 1
+467140093 STAGE enum-playback
+467140109 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467140109 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467140109 STAGE chosen-playback
+467140109 STAGE metadata-begin
+467140109 STAGE metadata-end
+467140109 STAGE timeline
+467140109 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=14.416123 dur=194.583356
+467140765 STAGE tick-start
+467140765 STAGE manager
+467140765 STAGE enumerate
+467140765 SESSION_COUNT 1
+467140765 STAGE enum-playback
+467140765 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467140781 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467140781 STAGE chosen-playback
+467140781 STAGE metadata-begin
+467140781 STAGE metadata-end
+467140781 STAGE timeline
+467140781 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=15.088123 dur=194.583356
+467141437 STAGE tick-start
+467141437 STAGE manager
+467141437 STAGE enumerate
+467141437 SESSION_COUNT 1
+467141453 STAGE enum-playback
+467141453 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467141453 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467141453 STAGE chosen-playback
+467141453 STAGE metadata-begin
+467141453 STAGE metadata-end
+467141453 STAGE timeline
+467141453 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=15.760123 dur=194.583356
+467142125 STAGE tick-start
+467142125 STAGE manager
+467142125 STAGE enumerate
+467142125 SESSION_COUNT 1
+467142125 STAGE enum-playback
+467142125 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467142125 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467142140 STAGE chosen-playback
+467142140 STAGE metadata-begin
+467142140 STAGE metadata-end
+467142140 STAGE timeline
+467142140 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=16.447123 dur=194.583356
+467142796 STAGE tick-start
+467142812 STAGE manager
+467142812 STAGE enumerate
+467142812 SESSION_COUNT 1
+467142812 STAGE enum-playback
+467142812 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467142812 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467142812 STAGE chosen-playback
+467142828 STAGE metadata-begin
+467142828 STAGE metadata-end
+467142828 STAGE timeline
+467142828 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=17.135123 dur=194.583356
+467143484 STAGE tick-start
+467143484 STAGE manager
+467143500 STAGE enumerate
+467143500 SESSION_COUNT 1
+467143500 STAGE enum-playback
+467143515 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467143515 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467143515 STAGE chosen-playback
+467143515 STAGE metadata-begin
+467143531 STAGE metadata-end
+467143531 STAGE timeline
+467143531 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=17.838123 dur=194.583356
+467144187 STAGE tick-start
+467144187 STAGE manager
+467144187 STAGE enumerate
+467144187 SESSION_COUNT 1
+467144203 STAGE enum-playback
+467144203 SESSION MusicFree.exe id=MusicFree.exe#3 state=1
+467144203 CHOSEN MusicFree.exe#3 wanted=MusicFree.exe#3 app=MusicFree.exe
+467144203 STAGE chosen-playback
+467144203 STAGE metadata-begin
+467144203 STAGE metadata-end
+467144203 STAGE timeline
+467144218 PUBLISH valid=1 id=MusicFree.exe#3 title=【Ellie原创歌曲】Stupid heart pos=18.510123 dur=194.583356
+467144875 STAGE tick-start
+467144875 STAGE manager
+467144875 STAGE enumerate
+467144875 SESSION_COUNT 0
+467144875 CHOSEN  wanted=MusicFree.exe#3 app=MusicFree.exe
+467144890 PUBLISH valid=0 id= title= pos=0.000000 dur=0.000000
+467145546 STAGE tick-start
+467145546 STAGE manager
+467145546 STAGE enumerate
+467145546 SESSION_COUNT 1
+467145546 STAGE enum-playback
+467145546 SESSION MusicFree.exe id=MusicFree.exe#4 state=1
+467145546 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#3 app=MusicFree.exe
+467145546 STAGE chosen-playback
+467145562 STAGE metadata-begin
+467145562 STAGE metadata-end
+467145562 STAGE timeline
+467145562 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=0.083073 dur=248.255667
+467146234 STAGE tick-start
+467146234 STAGE manager
+467146234 STAGE enumerate
+467146234 SESSION_COUNT 1
+467146234 STAGE enum-playback
+467146234 SESSION MusicFree.exe id=MusicFree.exe#4 state=1
+467146250 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467146250 STAGE chosen-playback
+467146250 STAGE metadata-begin
+467146250 STAGE metadata-end
+467146250 STAGE timeline
+467146250 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=0.771073 dur=248.255667
+467146921 STAGE tick-start
+467146921 STAGE manager
+467146921 STAGE enumerate
+467146921 SESSION_COUNT 1
+467146921 STAGE enum-playback
+467146937 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467146937 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467146937 STAGE chosen-playback
+467146937 STAGE metadata-begin
+467146937 STAGE metadata-end
+467146953 STAGE timeline
+467146953 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467147625 STAGE tick-start
+467147625 STAGE manager
+467147625 STAGE enumerate
+467147625 SESSION_COUNT 1
+467147625 STAGE enum-playback
+467147625 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467147625 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467147625 STAGE chosen-playback
+467147625 STAGE metadata-begin
+467147640 STAGE metadata-end
+467147640 STAGE timeline
+467147640 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467148296 STAGE tick-start
+467148296 STAGE manager
+467148312 STAGE enumerate
+467148312 SESSION_COUNT 1
+467148312 STAGE enum-playback
+467148312 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467148312 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467148312 STAGE chosen-playback
+467148312 STAGE metadata-begin
+467148328 STAGE metadata-end
+467148328 STAGE timeline
+467148328 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467148984 STAGE tick-start
+467148984 STAGE manager
+467149000 STAGE enumerate
+467149000 SESSION_COUNT 1
+467149000 STAGE enum-playback
+467149000 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467149000 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467149015 STAGE chosen-playback
+467149015 STAGE metadata-begin
+467149015 STAGE metadata-end
+467149015 STAGE timeline
+467149015 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467149671 STAGE tick-start
+467149671 STAGE manager
+467149671 STAGE enumerate
+467149687 SESSION_COUNT 1
+467149687 STAGE enum-playback
+467149687 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467149687 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467149687 STAGE chosen-playback
+467149687 STAGE metadata-begin
+467149687 STAGE metadata-end
+467149703 STAGE timeline
+467149703 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467150359 STAGE tick-start
+467150359 STAGE manager
+467150359 STAGE enumerate
+467150359 SESSION_COUNT 1
+467150375 STAGE enum-playback
+467150375 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467150375 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467150375 STAGE chosen-playback
+467150375 STAGE metadata-begin
+467150375 STAGE metadata-end
+467150390 STAGE timeline
+467150390 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467151046 STAGE tick-start
+467151046 STAGE manager
+467151046 STAGE enumerate
+467151062 SESSION_COUNT 1
+467151062 STAGE enum-playback
+467151062 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467151062 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467151078 STAGE chosen-playback
+467151078 STAGE metadata-begin
+467151078 STAGE metadata-end
+467151078 STAGE timeline
+467151078 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467151750 STAGE tick-start
+467151750 STAGE manager
+467151750 STAGE enumerate
+467151750 SESSION_COUNT 1
+467151765 STAGE enum-playback
+467151765 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467151765 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467151765 STAGE chosen-playback
+467151765 STAGE metadata-begin
+467151781 STAGE metadata-end
+467151781 STAGE timeline
+467151781 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467152453 STAGE tick-start
+467152453 STAGE manager
+467152453 STAGE enumerate
+467152453 SESSION_COUNT 1
+467152453 STAGE enum-playback
+467152453 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467152453 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467152453 STAGE chosen-playback
+467152468 STAGE metadata-begin
+467152468 STAGE metadata-end
+467152468 STAGE timeline
+467152468 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467153125 STAGE tick-start
+467153125 STAGE manager
+467153140 STAGE enumerate
+467153140 SESSION_COUNT 1
+467153140 STAGE enum-playback
+467153140 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467153140 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467153140 STAGE chosen-playback
+467153156 STAGE metadata-begin
+467153156 STAGE metadata-end
+467153156 STAGE timeline
+467153156 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467153812 STAGE tick-start
+467153812 STAGE manager
+467153828 STAGE enumerate
+467153828 SESSION_COUNT 1
+467153828 STAGE enum-playback
+467153828 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467153843 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467153843 STAGE chosen-playback
+467153843 STAGE metadata-begin
+467153843 STAGE metadata-end
+467153843 STAGE timeline
+467153859 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467154515 STAGE tick-start
+467154515 STAGE manager
+467154515 STAGE enumerate
+467154515 SESSION_COUNT 1
+467154531 STAGE enum-playback
+467154531 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467154531 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467154531 STAGE chosen-playback
+467154531 STAGE metadata-begin
+467154531 STAGE metadata-end
+467154531 STAGE timeline
+467154531 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467155203 STAGE tick-start
+467155203 STAGE manager
+467155203 STAGE enumerate
+467155203 SESSION_COUNT 1
+467155203 STAGE enum-playback
+467155218 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467155218 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467155218 STAGE chosen-playback
+467155218 STAGE metadata-begin
+467155218 STAGE metadata-end
+467155218 STAGE timeline
+467155234 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467155890 STAGE tick-start
+467155890 STAGE manager
+467155890 STAGE enumerate
+467155890 SESSION_COUNT 1
+467155890 STAGE enum-playback
+467155890 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467155906 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467155906 STAGE chosen-playback
+467155906 STAGE metadata-begin
+467155906 STAGE metadata-end
+467155906 STAGE timeline
+467155906 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467156578 STAGE tick-start
+467156578 STAGE manager
+467156578 STAGE enumerate
+467156578 SESSION_COUNT 1
+467156593 STAGE enum-playback
+467156593 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467156593 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467156593 STAGE chosen-playback
+467156593 STAGE metadata-begin
+467156593 STAGE metadata-end
+467156593 STAGE timeline
+467156593 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467157265 STAGE tick-start
+467157265 STAGE manager
+467157265 STAGE enumerate
+467157265 SESSION_COUNT 1
+467157281 STAGE enum-playback
+467157281 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467157281 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467157281 STAGE chosen-playback
+467157281 STAGE metadata-begin
+467157281 STAGE metadata-end
+467157296 STAGE timeline
+467157296 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467157953 STAGE tick-start
+467157953 STAGE manager
+467157953 STAGE enumerate
+467157953 SESSION_COUNT 1
+467157953 STAGE enum-playback
+467157953 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467157968 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467157968 STAGE chosen-playback
+467157968 STAGE metadata-begin
+467157968 STAGE metadata-end
+467157968 STAGE timeline
+467157984 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467158625 STAGE tick-start
+467158640 STAGE manager
+467158640 STAGE enumerate
+467158640 SESSION_COUNT 1
+467158640 STAGE enum-playback
+467158640 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467158656 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467158656 STAGE chosen-playback
+467158656 STAGE metadata-begin
+467158656 STAGE metadata-end
+467158656 STAGE timeline
+467158656 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467159328 STAGE tick-start
+467159328 STAGE manager
+467159328 STAGE enumerate
+467159328 SESSION_COUNT 1
+467159328 STAGE enum-playback
+467159343 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467159343 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467159343 STAGE chosen-playback
+467159343 STAGE metadata-begin
+467159343 STAGE metadata-end
+467159343 STAGE timeline
+467159343 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467160015 STAGE tick-start
+467160015 STAGE manager
+467160031 STAGE enumerate
+467160031 SESSION_COUNT 1
+467160031 STAGE enum-playback
+467160031 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467160031 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467160031 STAGE chosen-playback
+467160046 STAGE metadata-begin
+467160046 STAGE metadata-end
+467160046 STAGE timeline
+467160046 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467160718 STAGE tick-start
+467160718 STAGE manager
+467160718 STAGE enumerate
+467160734 SESSION_COUNT 1
+467160734 STAGE enum-playback
+467160734 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467160734 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467160734 STAGE chosen-playback
+467160734 STAGE metadata-begin
+467160750 STAGE metadata-end
+467160750 STAGE timeline
+467160750 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467161406 STAGE tick-start
+467161406 STAGE manager
+467161406 STAGE enumerate
+467161406 SESSION_COUNT 1
+467161421 STAGE enum-playback
+467161421 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467161421 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467161421 STAGE chosen-playback
+467161421 STAGE metadata-begin
+467161421 STAGE metadata-end
+467161421 STAGE timeline
+467161421 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467162093 STAGE tick-start
+467162093 STAGE manager
+467162093 STAGE enumerate
+467162093 SESSION_COUNT 1
+467162093 STAGE enum-playback
+467162109 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467162109 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467162109 STAGE chosen-playback
+467162109 STAGE metadata-begin
+467162109 STAGE metadata-end
+467162109 STAGE timeline
+467162125 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467162781 STAGE tick-start
+467162796 STAGE manager
+467162796 STAGE enumerate
+467162796 SESSION_COUNT 1
+467162796 STAGE enum-playback
+467162796 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467162796 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467162796 STAGE chosen-playback
+467162812 STAGE metadata-begin
+467162812 STAGE metadata-end
+467162812 STAGE timeline
+467162812 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467163468 STAGE tick-start
+467163484 STAGE manager
+467163484 STAGE enumerate
+467163484 SESSION_COUNT 1
+467163484 STAGE enum-playback
+467163484 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467163484 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467163500 STAGE chosen-playback
+467163500 STAGE metadata-begin
+467163500 STAGE metadata-end
+467163500 STAGE timeline
+467163500 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467164156 STAGE tick-start
+467164156 STAGE manager
+467164171 STAGE enumerate
+467164171 SESSION_COUNT 1
+467164171 STAGE enum-playback
+467164171 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467164171 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467164171 STAGE chosen-playback
+467164171 STAGE metadata-begin
+467164187 STAGE metadata-end
+467164187 STAGE timeline
+467164187 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467164843 STAGE tick-start
+467164843 STAGE manager
+467164843 STAGE enumerate
+467164843 SESSION_COUNT 1
+467164843 STAGE enum-playback
+467164859 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467164859 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467164859 STAGE chosen-playback
+467164859 STAGE metadata-begin
+467164859 STAGE metadata-end
+467164859 STAGE timeline
+467164875 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467165531 STAGE tick-start
+467165531 STAGE manager
+467165531 STAGE enumerate
+467165531 SESSION_COUNT 1
+467165546 STAGE enum-playback
+467165546 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467165546 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467165546 STAGE chosen-playback
+467165546 STAGE metadata-begin
+467165562 STAGE metadata-end
+467165562 STAGE timeline
+467165562 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467166218 STAGE tick-start
+467166234 STAGE manager
+467166234 STAGE enumerate
+467166234 SESSION_COUNT 1
+467166234 STAGE enum-playback
+467166250 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467166250 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467166250 STAGE chosen-playback
+467166250 STAGE metadata-begin
+467166250 STAGE metadata-end
+467166250 STAGE timeline
+467166265 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467166906 STAGE tick-start
+467166921 STAGE manager
+467166921 STAGE enumerate
+467166921 SESSION_COUNT 1
+467166921 STAGE enum-playback
+467166921 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467166921 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467166921 STAGE chosen-playback
+467166921 STAGE metadata-begin
+467166937 STAGE metadata-end
+467166937 STAGE timeline
+467166937 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467167593 STAGE tick-start
+467167609 STAGE manager
+467167609 STAGE enumerate
+467167609 SESSION_COUNT 1
+467167609 STAGE enum-playback
+467167609 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467167609 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467167609 STAGE chosen-playback
+467167625 STAGE metadata-begin
+467167625 STAGE metadata-end
+467167625 STAGE timeline
+467167625 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467168296 STAGE tick-start
+467168296 STAGE manager
+467168296 STAGE enumerate
+467168296 SESSION_COUNT 1
+467168296 STAGE enum-playback
+467168296 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467168296 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467168296 STAGE chosen-playback
+467168312 STAGE metadata-begin
+467168312 STAGE metadata-end
+467168312 STAGE timeline
+467168312 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467168984 STAGE tick-start
+467168984 STAGE manager
+467168984 STAGE enumerate
+467168984 SESSION_COUNT 1
+467168984 STAGE enum-playback
+467168984 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467169000 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467169000 STAGE chosen-playback
+467169000 STAGE metadata-begin
+467169000 STAGE metadata-end
+467169000 STAGE timeline
+467169015 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467169671 STAGE tick-start
+467169671 STAGE manager
+467169687 STAGE enumerate
+467169687 SESSION_COUNT 1
+467169687 STAGE enum-playback
+467169687 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467169687 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467169687 STAGE chosen-playback
+467169687 STAGE metadata-begin
+467169703 STAGE metadata-end
+467169703 STAGE timeline
+467169703 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467170359 STAGE tick-start
+467170359 STAGE manager
+467170359 STAGE enumerate
+467170375 SESSION_COUNT 1
+467170375 STAGE enum-playback
+467170375 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467170375 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467170375 STAGE chosen-playback
+467170375 STAGE metadata-begin
+467170390 STAGE metadata-end
+467170390 STAGE timeline
+467170390 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467171046 STAGE tick-start
+467171046 STAGE manager
+467171046 STAGE enumerate
+467171046 SESSION_COUNT 1
+467171046 STAGE enum-playback
+467171062 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467171062 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467171062 STAGE chosen-playback
+467171062 STAGE metadata-begin
+467171062 STAGE metadata-end
+467171062 STAGE timeline
+467171062 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467171734 STAGE tick-start
+467171734 STAGE manager
+467171734 STAGE enumerate
+467171734 SESSION_COUNT 1
+467171734 STAGE enum-playback
+467171750 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467171750 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467171750 STAGE chosen-playback
+467171750 STAGE metadata-begin
+467171750 STAGE metadata-end
+467171765 STAGE timeline
+467171765 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467172421 STAGE tick-start
+467172421 STAGE manager
+467172421 STAGE enumerate
+467172421 SESSION_COUNT 1
+467172437 STAGE enum-playback
+467172437 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467172437 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467172437 STAGE chosen-playback
+467172437 STAGE metadata-begin
+467172453 STAGE metadata-end
+467172453 STAGE timeline
+467172453 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467173125 STAGE tick-start
+467173125 STAGE manager
+467173125 STAGE enumerate
+467173125 SESSION_COUNT 1
+467173125 STAGE enum-playback
+467173140 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467173140 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467173140 STAGE chosen-playback
+467173140 STAGE metadata-begin
+467173140 STAGE metadata-end
+467173156 STAGE timeline
+467173156 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467173812 STAGE tick-start
+467173812 STAGE manager
+467173812 STAGE enumerate
+467173828 SESSION_COUNT 1
+467173828 STAGE enum-playback
+467173828 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467173828 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467173828 STAGE chosen-playback
+467173828 STAGE metadata-begin
+467173828 STAGE metadata-end
+467173828 STAGE timeline
+467173843 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467174500 STAGE tick-start
+467174500 STAGE manager
+467174500 STAGE enumerate
+467174500 SESSION_COUNT 1
+467174515 STAGE enum-playback
+467174515 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467174515 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467174515 STAGE chosen-playback
+467174515 STAGE metadata-begin
+467174515 STAGE metadata-end
+467174515 STAGE timeline
+467174515 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467175187 STAGE tick-start
+467175203 STAGE manager
+467175203 STAGE enumerate
+467175218 SESSION_COUNT 1
+467175218 STAGE enum-playback
+467175218 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467175218 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467175234 STAGE chosen-playback
+467175234 STAGE metadata-begin
+467175250 STAGE metadata-end
+467175265 STAGE timeline
+467175265 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467175921 STAGE tick-start
+467175937 STAGE manager
+467175937 STAGE enumerate
+467175937 SESSION_COUNT 1
+467175937 STAGE enum-playback
+467175937 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467175953 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467175953 STAGE chosen-playback
+467175953 STAGE metadata-begin
+467175953 STAGE metadata-end
+467175968 STAGE timeline
+467175968 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467176625 STAGE tick-start
+467176625 STAGE manager
+467176625 STAGE enumerate
+467176625 SESSION_COUNT 1
+467176625 STAGE enum-playback
+467176640 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467176640 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467176640 STAGE chosen-playback
+467176640 STAGE metadata-begin
+467176640 STAGE metadata-end
+467176640 STAGE timeline
+467176640 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467177296 STAGE tick-start
+467177296 STAGE manager
+467177296 STAGE enumerate
+467177296 SESSION_COUNT 1
+467177296 STAGE enum-playback
+467177312 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467177312 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467177312 STAGE chosen-playback
+467177312 STAGE metadata-begin
+467177312 STAGE metadata-end
+467177312 STAGE timeline
+467177312 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467177968 STAGE tick-start
+467177984 STAGE manager
+467177984 STAGE enumerate
+467177984 SESSION_COUNT 1
+467177984 STAGE enum-playback
+467177984 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467177984 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467177984 STAGE chosen-playback
+467177984 STAGE metadata-begin
+467177984 STAGE metadata-end
+467177984 STAGE timeline
+467177984 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467178640 STAGE tick-start
+467178640 STAGE manager
+467178640 STAGE enumerate
+467178640 SESSION_COUNT 1
+467178656 STAGE enum-playback
+467178656 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467178656 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467178656 STAGE chosen-playback
+467178656 STAGE metadata-begin
+467178656 STAGE metadata-end
+467178656 STAGE timeline
+467178656 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467179312 STAGE tick-start
+467179312 STAGE manager
+467179312 STAGE enumerate
+467179312 SESSION_COUNT 1
+467179312 STAGE enum-playback
+467179312 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467179312 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467179312 STAGE chosen-playback
+467179312 STAGE metadata-begin
+467179328 STAGE metadata-end
+467179328 STAGE timeline
+467179328 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467179984 STAGE tick-start
+467179984 STAGE manager
+467179984 STAGE enumerate
+467180000 SESSION_COUNT 1
+467180000 STAGE enum-playback
+467180000 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467180000 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467180000 STAGE chosen-playback
+467180000 STAGE metadata-begin
+467180015 STAGE metadata-end
+467180015 STAGE timeline
+467180015 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467180671 STAGE tick-start
+467180671 STAGE manager
+467180671 STAGE enumerate
+467180671 SESSION_COUNT 1
+467180671 STAGE enum-playback
+467180687 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467180687 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467180687 STAGE chosen-playback
+467180687 STAGE metadata-begin
+467180687 STAGE metadata-end
+467180687 STAGE timeline
+467180703 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467181359 STAGE tick-start
+467181359 STAGE manager
+467181359 STAGE enumerate
+467181359 SESSION_COUNT 1
+467181359 STAGE enum-playback
+467181375 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467181375 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467181375 STAGE chosen-playback
+467181375 STAGE metadata-begin
+467181390 STAGE metadata-end
+467181390 STAGE timeline
+467181390 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467182062 STAGE tick-start
+467182062 STAGE manager
+467182062 STAGE enumerate
+467182062 SESSION_COUNT 1
+467182062 STAGE enum-playback
+467182062 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467182078 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467182078 STAGE chosen-playback
+467182078 STAGE metadata-begin
+467182078 STAGE metadata-end
+467182078 STAGE timeline
+467182078 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467182734 STAGE tick-start
+467182734 STAGE manager
+467182750 STAGE enumerate
+467182750 SESSION_COUNT 1
+467182750 STAGE enum-playback
+467182750 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467182750 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467182750 STAGE chosen-playback
+467182765 STAGE metadata-begin
+467182765 STAGE metadata-end
+467182765 STAGE timeline
+467182765 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467183421 STAGE tick-start
+467183421 STAGE manager
+467183421 STAGE enumerate
+467183437 SESSION_COUNT 1
+467183437 STAGE enum-playback
+467183437 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467183437 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467183437 STAGE chosen-playback
+467183437 STAGE metadata-begin
+467183437 STAGE metadata-end
+467183437 STAGE timeline
+467183437 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467184109 STAGE tick-start
+467184109 STAGE manager
+467184125 STAGE enumerate
+467184125 SESSION_COUNT 1
+467184125 STAGE enum-playback
+467184125 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467184125 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467184125 STAGE chosen-playback
+467184125 STAGE metadata-begin
+467184140 STAGE metadata-end
+467184140 STAGE timeline
+467184140 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467184796 STAGE tick-start
+467184812 STAGE manager
+467184812 STAGE enumerate
+467184812 SESSION_COUNT 1
+467184812 STAGE enum-playback
+467184812 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467184828 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467184828 STAGE chosen-playback
+467184828 STAGE metadata-begin
+467184828 STAGE metadata-end
+467184828 STAGE timeline
+467184828 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467185484 STAGE tick-start
+467185484 STAGE manager
+467185484 STAGE enumerate
+467185484 SESSION_COUNT 1
+467185500 STAGE enum-playback
+467185500 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467185500 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467185500 STAGE chosen-playback
+467185500 STAGE metadata-begin
+467185500 STAGE metadata-end
+467185500 STAGE timeline
+467185515 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467186171 STAGE tick-start
+467186171 STAGE manager
+467186171 STAGE enumerate
+467186171 SESSION_COUNT 1
+467186171 STAGE enum-playback
+467186187 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467186187 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467186187 STAGE chosen-playback
+467186187 STAGE metadata-begin
+467186187 STAGE metadata-end
+467186187 STAGE timeline
+467186187 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467186859 STAGE tick-start
+467186859 STAGE manager
+467186859 STAGE enumerate
+467186859 SESSION_COUNT 1
+467186859 STAGE enum-playback
+467186859 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467186859 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467186875 STAGE chosen-playback
+467186875 STAGE metadata-begin
+467186875 STAGE metadata-end
+467186875 STAGE timeline
+467186875 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467187546 STAGE tick-start
+467187546 STAGE manager
+467187546 STAGE enumerate
+467187546 SESSION_COUNT 1
+467187546 STAGE enum-playback
+467187562 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467187562 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467187562 STAGE chosen-playback
+467187562 STAGE metadata-begin
+467187578 STAGE metadata-end
+467187578 STAGE timeline
+467187578 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467188234 STAGE tick-start
+467188234 STAGE manager
+467188234 STAGE enumerate
+467188234 SESSION_COUNT 1
+467188234 STAGE enum-playback
+467188234 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467188250 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467188250 STAGE chosen-playback
+467188250 STAGE metadata-begin
+467188250 STAGE metadata-end
+467188250 STAGE timeline
+467188250 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467188921 STAGE tick-start
+467188921 STAGE manager
+467188921 STAGE enumerate
+467188921 SESSION_COUNT 1
+467188921 STAGE enum-playback
+467188921 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467188921 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467188921 STAGE chosen-playback
+467188921 STAGE metadata-begin
+467188937 STAGE metadata-end
+467188937 STAGE timeline
+467188937 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467189609 STAGE tick-start
+467189609 STAGE manager
+467189609 STAGE enumerate
+467189609 SESSION_COUNT 1
+467189609 STAGE enum-playback
+467189609 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467189625 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467189625 STAGE chosen-playback
+467189625 STAGE metadata-begin
+467189625 STAGE metadata-end
+467189625 STAGE timeline
+467189640 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467190296 STAGE tick-start
+467190296 STAGE manager
+467190296 STAGE enumerate
+467190296 SESSION_COUNT 1
+467190312 STAGE enum-playback
+467190312 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467190312 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467190312 STAGE chosen-playback
+467190312 STAGE metadata-begin
+467190312 STAGE metadata-end
+467190328 STAGE timeline
+467190328 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467190984 STAGE tick-start
+467190984 STAGE manager
+467190984 STAGE enumerate
+467190984 SESSION_COUNT 1
+467191000 STAGE enum-playback
+467191000 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467191000 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467191000 STAGE chosen-playback
+467191000 STAGE metadata-begin
+467191000 STAGE metadata-end
+467191015 STAGE timeline
+467191015 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467191687 STAGE tick-start
+467191687 STAGE manager
+467191687 STAGE enumerate
+467191687 SESSION_COUNT 1
+467191687 STAGE enum-playback
+467191687 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467191687 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467191687 STAGE chosen-playback
+467191703 STAGE metadata-begin
+467191703 STAGE metadata-end
+467191703 STAGE timeline
+467191703 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467192375 STAGE tick-start
+467192375 STAGE manager
+467192375 STAGE enumerate
+467192375 SESSION_COUNT 1
+467192375 STAGE enum-playback
+467192375 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467192375 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467192390 STAGE chosen-playback
+467192390 STAGE metadata-begin
+467192390 STAGE metadata-end
+467192390 STAGE timeline
+467192390 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467193046 STAGE tick-start
+467193046 STAGE manager
+467193062 STAGE enumerate
+467193062 SESSION_COUNT 1
+467193062 STAGE enum-playback
+467193062 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467193062 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467193062 STAGE chosen-playback
+467193062 STAGE metadata-begin
+467193078 STAGE metadata-end
+467193078 STAGE timeline
+467193078 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467193734 STAGE tick-start
+467193734 STAGE manager
+467193734 STAGE enumerate
+467193734 SESSION_COUNT 1
+467193750 STAGE enum-playback
+467193750 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467193750 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467193750 STAGE chosen-playback
+467193750 STAGE metadata-begin
+467193765 STAGE metadata-end
+467193765 STAGE timeline
+467193765 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467194421 STAGE tick-start
+467194421 STAGE manager
+467194437 STAGE enumerate
+467194437 SESSION_COUNT 1
+467194437 STAGE enum-playback
+467194437 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467194437 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467194437 STAGE chosen-playback
+467194437 STAGE metadata-begin
+467194437 STAGE metadata-end
+467194453 STAGE timeline
+467194453 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467195109 STAGE tick-start
+467195109 STAGE manager
+467195109 STAGE enumerate
+467195125 SESSION_COUNT 1
+467195125 STAGE enum-playback
+467195125 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467195125 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467195125 STAGE chosen-playback
+467195125 STAGE metadata-begin
+467195140 STAGE metadata-end
+467195140 STAGE timeline
+467195140 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467195796 STAGE tick-start
+467195796 STAGE manager
+467195796 STAGE enumerate
+467195812 SESSION_COUNT 1
+467195812 STAGE enum-playback
+467195812 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467195812 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467195812 STAGE chosen-playback
+467195812 STAGE metadata-begin
+467195812 STAGE metadata-end
+467195828 STAGE timeline
+467195828 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467196468 STAGE tick-start
+467196484 STAGE manager
+467196484 STAGE enumerate
+467196484 SESSION_COUNT 1
+467196484 STAGE enum-playback
+467196484 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467196500 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467196500 STAGE chosen-playback
+467196500 STAGE metadata-begin
+467196500 STAGE metadata-end
+467196500 STAGE timeline
+467196515 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467197171 STAGE tick-start
+467197187 STAGE manager
+467197187 STAGE enumerate
+467197187 SESSION_COUNT 1
+467197187 STAGE enum-playback
+467197203 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467197203 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467197203 STAGE chosen-playback
+467197203 STAGE metadata-begin
+467197218 STAGE metadata-end
+467197218 STAGE timeline
+467197218 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467197875 STAGE tick-start
+467197875 STAGE manager
+467197890 STAGE enumerate
+467197890 SESSION_COUNT 1
+467197890 STAGE enum-playback
+467197890 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467197890 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467197890 STAGE chosen-playback
+467197890 STAGE metadata-begin
+467197906 STAGE metadata-end
+467197906 STAGE timeline
+467197906 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467198562 STAGE tick-start
+467198562 STAGE manager
+467198562 STAGE enumerate
+467198562 SESSION_COUNT 1
+467198562 STAGE enum-playback
+467198562 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467198578 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467198578 STAGE chosen-playback
+467198578 STAGE metadata-begin
+467198578 STAGE metadata-end
+467198578 STAGE timeline
+467198578 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467199250 STAGE tick-start
+467199250 STAGE manager
+467199250 STAGE enumerate
+467199250 SESSION_COUNT 1
+467199250 STAGE enum-playback
+467199250 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467199250 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467199250 STAGE chosen-playback
+467199265 STAGE metadata-begin
+467199265 STAGE metadata-end
+467199265 STAGE timeline
+467199265 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467199937 STAGE tick-start
+467199937 STAGE manager
+467199937 STAGE enumerate
+467199937 SESSION_COUNT 1
+467199953 STAGE enum-playback
+467199953 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467199953 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467199953 STAGE chosen-playback
+467199953 STAGE metadata-begin
+467199968 STAGE metadata-end
+467199968 STAGE timeline
+467199968 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467200640 STAGE tick-start
+467200640 STAGE manager
+467200640 STAGE enumerate
+467200640 SESSION_COUNT 1
+467200640 STAGE enum-playback
+467200640 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467200656 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467200656 STAGE chosen-playback
+467200656 STAGE metadata-begin
+467200656 STAGE metadata-end
+467200656 STAGE timeline
+467200671 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467201328 STAGE tick-start
+467201328 STAGE manager
+467201343 STAGE enumerate
+467201343 SESSION_COUNT 1
+467201343 STAGE enum-playback
+467201343 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467201343 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467201343 STAGE chosen-playback
+467201343 STAGE metadata-begin
+467201343 STAGE metadata-end
+467201359 STAGE timeline
+467201359 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467202015 STAGE tick-start
+467202015 STAGE manager
+467202015 STAGE enumerate
+467202015 SESSION_COUNT 1
+467202015 STAGE enum-playback
+467202015 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467202015 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467202015 STAGE chosen-playback
+467202031 STAGE metadata-begin
+467202031 STAGE metadata-end
+467202031 STAGE timeline
+467202031 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467202687 STAGE tick-start
+467202703 STAGE manager
+467202703 STAGE enumerate
+467202703 SESSION_COUNT 1
+467202703 STAGE enum-playback
+467202703 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467202703 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467202703 STAGE chosen-playback
+467202703 STAGE metadata-begin
+467202718 STAGE metadata-end
+467202718 STAGE timeline
+467202718 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467203375 STAGE tick-start
+467203375 STAGE manager
+467203390 STAGE enumerate
+467203390 SESSION_COUNT 1
+467203390 STAGE enum-playback
+467203390 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467203390 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467203390 STAGE chosen-playback
+467203390 STAGE metadata-begin
+467203390 STAGE metadata-end
+467203406 STAGE timeline
+467203406 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467204062 STAGE tick-start
+467204062 STAGE manager
+467204062 STAGE enumerate
+467204078 SESSION_COUNT 1
+467204078 STAGE enum-playback
+467204078 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467204078 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467204078 STAGE chosen-playback
+467204078 STAGE metadata-begin
+467204078 STAGE metadata-end
+467204078 STAGE timeline
+467204093 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467204750 STAGE tick-start
+467204750 STAGE manager
+467204750 STAGE enumerate
+467204750 SESSION_COUNT 1
+467204750 STAGE enum-playback
+467204765 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467204765 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467204765 STAGE chosen-playback
+467204765 STAGE metadata-begin
+467204765 STAGE metadata-end
+467204765 STAGE timeline
+467204765 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467205437 STAGE tick-start
+467205437 STAGE manager
+467205437 STAGE enumerate
+467205437 SESSION_COUNT 1
+467205437 STAGE enum-playback
+467205453 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467205453 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467205453 STAGE chosen-playback
+467205453 STAGE metadata-begin
+467205453 STAGE metadata-end
+467205453 STAGE timeline
+467205453 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467206109 STAGE tick-start
+467206125 STAGE manager
+467206125 STAGE enumerate
+467206125 SESSION_COUNT 1
+467206125 STAGE enum-playback
+467206125 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467206125 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467206125 STAGE chosen-playback
+467206140 STAGE metadata-begin
+467206140 STAGE metadata-end
+467206140 STAGE timeline
+467206140 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467206796 STAGE tick-start
+467206812 STAGE manager
+467206812 STAGE enumerate
+467206812 SESSION_COUNT 1
+467206812 STAGE enum-playback
+467206812 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467206812 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467206812 STAGE chosen-playback
+467206812 STAGE metadata-begin
+467206828 STAGE metadata-end
+467206828 STAGE timeline
+467206828 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467207484 STAGE tick-start
+467207484 STAGE manager
+467207484 STAGE enumerate
+467207484 SESSION_COUNT 1
+467207500 STAGE enum-playback
+467207500 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467207500 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467207500 STAGE chosen-playback
+467207500 STAGE metadata-begin
+467207500 STAGE metadata-end
+467207500 STAGE timeline
+467207500 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467208171 STAGE tick-start
+467208171 STAGE manager
+467208171 STAGE enumerate
+467208171 SESSION_COUNT 1
+467208171 STAGE enum-playback
+467208171 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467208171 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467208187 STAGE chosen-playback
+467208187 STAGE metadata-begin
+467208187 STAGE metadata-end
+467208187 STAGE timeline
+467208187 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467208859 STAGE tick-start
+467208859 STAGE manager
+467208859 STAGE enumerate
+467208859 SESSION_COUNT 1
+467208859 STAGE enum-playback
+467208859 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467208875 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467208875 STAGE chosen-playback
+467208875 STAGE metadata-begin
+467208875 STAGE metadata-end
+467208875 STAGE timeline
+467208875 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467209546 STAGE tick-start
+467209546 STAGE manager
+467209546 STAGE enumerate
+467209546 SESSION_COUNT 1
+467209546 STAGE enum-playback
+467209546 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467209546 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467209546 STAGE chosen-playback
+467209546 STAGE metadata-begin
+467209562 STAGE metadata-end
+467209562 STAGE timeline
+467209562 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467210218 STAGE tick-start
+467210218 STAGE manager
+467210234 STAGE enumerate
+467210234 SESSION_COUNT 1
+467210234 STAGE enum-playback
+467210234 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467210234 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467210234 STAGE chosen-playback
+467210250 STAGE metadata-begin
+467210250 STAGE metadata-end
+467210250 STAGE timeline
+467210250 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467210906 STAGE tick-start
+467210906 STAGE manager
+467210906 STAGE enumerate
+467210906 SESSION_COUNT 1
+467210921 STAGE enum-playback
+467210921 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467210921 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467210921 STAGE chosen-playback
+467210921 STAGE metadata-begin
+467210921 STAGE metadata-end
+467210921 STAGE timeline
+467210921 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467211593 STAGE tick-start
+467211593 STAGE manager
+467211593 STAGE enumerate
+467211593 SESSION_COUNT 1
+467211593 STAGE enum-playback
+467211593 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467211609 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467211609 STAGE chosen-playback
+467211609 STAGE metadata-begin
+467211609 STAGE metadata-end
+467211609 STAGE timeline
+467211609 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467212281 STAGE tick-start
+467212281 STAGE manager
+467212281 STAGE enumerate
+467212281 SESSION_COUNT 1
+467212281 STAGE enum-playback
+467212281 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467212296 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467212296 STAGE chosen-playback
+467212296 STAGE metadata-begin
+467212296 STAGE metadata-end
+467212296 STAGE timeline
+467212296 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
+467212953 STAGE tick-start
+467212953 STAGE manager
+467212953 STAGE enumerate
+467212968 SESSION_COUNT 1
+467212968 STAGE enum-playback
+467212968 SESSION MusicFree.exe id=MusicFree.exe#4 state=2
+467212968 CHOSEN MusicFree.exe#4 wanted=MusicFree.exe#4 app=MusicFree.exe
+467212968 STAGE chosen-playback
+467212968 STAGE metadata-begin
+467212968 STAGE metadata-end
+467212968 STAGE timeline
+467212968 PUBLISH valid=1 id=MusicFree.exe#4 title=【洛天依原创曲】光与影的对白【2022官方生贺曲】 pos=1.128997 dur=248.255667
