@@ -18,7 +18,7 @@ int main(){
     int result=0;
     try{
         const fs::path root(ExeDir());fs::create_directories(root/L"inputs");
-        const auto source=(root.parent_path().parent_path()/L"skins"/L"Ellie.png").wstring();
+        const auto source=(root.parent_path().parent_path()/L"skins"/L"大肥鱼.png").wstring();
         std::wstring first,second,third;
         Check(SaveSkinPreset(source,first),"preset copy failed");
         fs::copy_file(source,root/L"inputs"/L"renamed.png",fs::copy_options::overwrite_existing);
@@ -27,14 +27,26 @@ int main(){
         Check(SkinDisplayName(first)==L"小艾莉 = 晚风","custom name read failed");
         const auto skins=ScanSkins();bool visible=false;for(const auto& s:skins)if(s.path==first&&s.label==L"小艾莉 = 晚风")visible=true;
         Check(visible,"preset menu name missing");
-        fs::copy_file(source,root/L"inputs"/L"Ellie.png",fs::copy_options::overwrite_existing);
+        fs::copy_file(source,root/L"inputs"/L"大肥鱼.png",fs::copy_options::overwrite_existing);
         // A valid image with different file bytes but the same name must not overwrite.
-        {std::ofstream append(root/L"inputs"/L"Ellie.png",std::ios::app|std::ios::binary);append<<"different";}
-        Check(SaveSkinPreset((root/L"inputs"/L"Ellie.png").wstring(),third)&&third!=first,"same-name collision failed");
+        {std::ofstream append(root/L"inputs"/L"大肥鱼.png",std::ios::app|std::ios::binary);append<<"different";}
+        Check(SaveSkinPreset((root/L"inputs"/L"大肥鱼.png").wstring(),third)&&third!=first,"same-name collision failed");
         Check(SkinDisplayName(first)==L"小艾莉 = 晚风","name changed after adding collision");
         const auto bad=root/L"inputs"/L"bad.png";{std::ofstream file(bad);file<<"not an image";}
         std::wstring ignored;Check(!SaveSkinPreset(bad.wstring(),ignored),"invalid image imported");
         report<<"PASS: presets copy, byte dedup, collision preservation, Unicode names and invalid image rejection\n";
+        const auto dynamic=root/L"inputs"/L"motion.gif";{std::ofstream f(dynamic,std::ios::binary);f<<"GIF89a test fixture";}
+        SkinItem pair,other,loadedPair;
+        Check(SavePairedPreset(first,dynamic.wstring(),L"组合一",pair),"pair save failed");
+        Check(SavePairedPreset(first,L"",L"组合二",other)&&pair.presetFile!=other.presetFile,"same static image cannot have multiple pairs");
+        Check(LoadPairedPreset(pair.presetFile,loadedPair)&&loadedPair.path==first&&loadedPair.label==L"组合一"&&!loadedPair.motionPath.empty(),"pair load failed");
+        Check(LoadPairedPreset(other.presetFile,loadedPair)&&loadedPair.motionPath.empty(),"static pair inherited previous animation");
+        wchar_t rel[1024]{};GetPrivateProfileStringW(L"preset",L"Motion",L"",rel,1024,pair.presetFile.c_str());
+        Check(!fs::path(rel).is_absolute(),"pair stored absolute media path");
+        Check(SetSkinDisplayName(pair.presetFile,L"重命名组合")&&LoadPairedPreset(pair.presetFile,loadedPair)&&loadedPair.label==L"重命名组合","pair rename failed");
+        WritePrivateProfileStringW(L"preset",L"Image",L"..\\outside.png",pair.presetFile.c_str());
+        Check(!LoadPairedPreset(pair.presetFile,loadedPair),"pair path traversal accepted");
+        report<<"PASS: paired preset persistence, relative paths, multiple pairs, rename, static-only isolation and traversal rejection\n";
         for(auto dpi:{96U,168U,288U})for(int height:{100,180,300,600})for(float aspect:{.25f,.65f,2.f}){
             const int h=MulDiv(height,dpi,96),w=(int)(h*aspect);auto layout=ComputeNoteLayout(w,h,dpi);
             Check(layout.scale>0&&layout.margin>0&&layout.top>0,"invalid adaptive layout");

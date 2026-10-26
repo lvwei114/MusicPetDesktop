@@ -79,6 +79,7 @@ struct MediaWatcher::Impl {
         if(previous.valid&&now-missingSince<1500){
             previous.reconnecting=true;
             previous.canToggle=previous.canNext=previous.canPrev=false;
+            previous.canShuffle=previous.canRepeat=false;
             previous.positionSec=previous.durationSec=0;
             Publish(std::move(previous),std::move(list));
         }else Publish({},std::move(list));
@@ -163,6 +164,14 @@ struct MediaWatcher::Impl {
                 if(command.kind==CMD_TOGGLE) ok=Await(chosen.TryTogglePlayPauseAsync());
                 if(command.kind==CMD_NEXT) ok=Await(chosen.TrySkipNextAsync());
                 if(command.kind==CMD_PREV) ok=Await(chosen.TrySkipPreviousAsync());
+                auto controls=chosen.GetPlaybackInfo().Controls();
+                if(command.kind==CMD_SHUFFLE_OFF||command.kind==CMD_SHUFFLE_ON){
+                    if(controls.IsShuffleEnabled())ok=Await(chosen.TryChangeShuffleActiveAsync(command.kind==CMD_SHUFFLE_ON));
+                }
+                if(command.kind>=CMD_REPEAT_OFF&&command.kind<=CMD_REPEAT_LIST){
+                    if(controls.IsRepeatEnabled())ok=Await(chosen.TryChangeAutoRepeatModeAsync(
+                        static_cast<winrt::Windows::Media::MediaPlaybackAutoRepeatMode>(command.kind-CMD_REPEAT_OFF)));
+                }
             } catch(...) {}
             if(ok&&(command.kind==CMD_NEXT||command.kind==CMD_PREV))lastProperties=0;
             if(!ok && !stop) PostMessageW(notify,WM_APP+3,0,0);
@@ -172,6 +181,9 @@ struct MediaWatcher::Impl {
             next.valid=true; next.sessionId=chosenId; next.appId=chosen.SourceAppUserModelId().c_str(); next.appName=Name(next.appId);
             auto info=chosen.GetPlaybackInfo(); next.status=Map(info.PlaybackStatus()); auto controls=info.Controls();
             next.canToggle=controls.IsPlayPauseToggleEnabled(); next.canNext=controls.IsNextEnabled(); next.canPrev=controls.IsPreviousEnabled();
+            next.canShuffle=controls.IsShuffleEnabled();next.canRepeat=controls.IsRepeatEnabled();
+            if(auto value=info.IsShuffleActive())next.shuffle=value.Value()?1:0;
+            if(auto value=info.AutoRepeatMode())next.repeat=(int)value.Value();
             if(lastId!=chosenId) { title.clear();artist.clear();lastProperties=0;lastId=chosenId; }
             const bool dirty=signal->metadataDirty.exchange(false);
             if(dirty||!lastProperties||GetTickCount64()-lastProperties>=3000) {

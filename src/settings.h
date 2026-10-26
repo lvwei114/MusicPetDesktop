@@ -5,6 +5,10 @@
 #include <string>
 
 struct Settings {
+    int motionSpeed = 100;
+    bool motionPingPong = false;
+    std::wstring presetPath;            // selected paired preset manifest
+    std::wstring motionPath;            // optional GIF / MP4 used only while playing
     std::wstring launchPath;            // explicitly selected executable or shortcut
     std::wstring skinPath;              // 空 = 内置占位形象
     int petHeight = 200;                // 逻辑像素高度（96 DPI 基准）

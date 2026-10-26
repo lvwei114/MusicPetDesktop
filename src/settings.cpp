@@ -8,6 +8,10 @@ static std::wstring Read(const wchar_t* key, const wchar_t* fallback, const std:
 }
 void LoadSettings(Settings& s) {
     const auto f = SettingsFilePath();
+    s.motionPath = Read(L"Motion", L"", f);
+    s.presetPath = Read(L"Preset", L"", f);
+    s.motionSpeed = std::clamp((int)GetPrivateProfileIntW(L"pet",L"MotionSpeed",100,f.c_str()),25,200);
+    s.motionPingPong = GetPrivateProfileIntW(L"pet",L"MotionPingPong",0,f.c_str())!=0;
     s.launchPath = Read(L"LaunchPath", L"", f);
     s.skinPath = Read(L"Skin", L"", f);
     s.petHeight = std::clamp((int)GetPrivateProfileIntW(L"pet", L"Height", 300, f.c_str()), 100, 600);
@@ -52,7 +56,10 @@ bool SetAutoStartEnabled(bool enabled){
 }
 void SaveSettings(const Settings& s) {
     const auto f = SettingsFilePath();
+    WritePrivateProfileStringW(L"pet", L"Motion", s.motionPath.c_str(), f.c_str());
+    WritePrivateProfileStringW(L"pet", L"Preset", s.presetPath.c_str(), f.c_str());
     const auto put = [&](const wchar_t* k, int v) { WritePrivateProfileStringW(L"pet", k, std::to_wstring(v).c_str(), f.c_str()); };
+    put(L"MotionSpeed",s.motionSpeed);put(L"MotionPingPong",s.motionPingPong);
     WritePrivateProfileStringW(L"pet", L"LaunchPath", s.launchPath.c_str(), f.c_str());
     WritePrivateProfileStringW(L"pet", L"Skin", s.skinPath.c_str(), f.c_str());
     put(L"Height", s.petHeight); put(L"X", s.posX); put(L"Y", s.posY);

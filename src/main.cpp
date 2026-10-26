@@ -1,8 +1,9 @@
-// MusicPet — static artwork, native windows, GSMTC, and quiet floating notes.
+// MusicPet — native windows, static/animated artwork, GSMTC and floating notes.
 #include <windows.h>
 #include <windowsx.h>
 #include <shellapi.h>
 #include <commdlg.h>
+#include <commctrl.h>
 #include <gdiplus.h>
 #include <algorithm>
 #include <cmath>
@@ -18,6 +19,9 @@
 #include "settings.h"
 #include "skin.h"
 #include "launcher.h"
+#include "motion.h"
+#include "apng.h"
+#include <filesystem>
 #pragma comment(lib,"comdlg32.lib")
 using namespace Gdiplus;
 namespace {
@@ -35,9 +39,15 @@ constexpr int CmdHotkey=230,CmdPalette=240,CmdLaunch=250,CmdLaunchChoose=251,Cmd
 constexpr int CmdChoose=201,CmdPreview=202,CmdThrough=203,CmdEffects=204,CmdLock=205,CmdReset=206,CmdExit=207,CmdGame=208;
 constexpr int CmdAuto=220,CmdSize=300,CmdDensity=900,CmdSkin=1000,CmdSession=2000;
 constexpr int CmdAutoStart=256;
+constexpr int CmdMotionChoose=257,CmdMotionClear=258,CmdSizeSlider=259,CmdMode=270;
+constexpr int CmdPairSave=260;
+constexpr int CmdMotionSpeed=280,CmdMotionBounce=287;
+constexpr int motionSpeeds[]={25,50,75,100,125,150,200};
+const wchar_t* motionSpeedLabels[]={L"0.25 倍",L"0.5 倍",L"0.75 倍",L"1 倍（原速）",L"1.25 倍",L"1.5 倍",L"2 倍"};
 struct State {
     HINSTANCE instance{}; HWND pet{},fx{},panel{}; HICON icon{};
-    Settings settings; PetImage image; NoteLayer notes; MediaWatcher media; MediaSnapshot snapshot;
+    Settings settings; PetImage image,motionImage; MotionPlayer motion; NoteLayer notes; MediaWatcher media; MediaSnapshot snapshot;
+    bool motionVisible{},motionFailed{};
     std::vector<SkinItem> skins; std::vector<SessionEntry> menuSessions;
     bool dragging{},animating{},busy{},hotkey{},preview{},shuttingDown{},trayAdded{};
     POINT dragOffset{}; int hover{},pressed{},panelDpi{96}; UINT dpi{96};
@@ -56,6 +66,8 @@ void Command(int id);
 void ShowPanel(POINT point);
 void UpdateAnimation();
 void AddTray();
+void SyncMotion();
+void RenameSkin();
 int Px(int value){return MulDiv(value,(int)a.dpi,96);}
 void Trace(const wchar_t* stage){if(!a.saveOnExit)WritePrivateProfileStringW(L"startup",L"stage",stage,(ExeDir()+L"\\qa\\startup.ini").c_str());}
 void RoundPath(GraphicsPath& p, RectF r,float radius) {
@@ -210,7 +222,9 @@ void ClampPosition(int& x,int& y,int w,int h){
 bool ApplyImage(const std::wstring& path,bool center=false){
     Trace(L"image-decode");
     PetImage next;const int target=Px(a.settings.petHeight);
-    if(!LoadPngImage(path,target*2,target,next)){Notify(L"图片加载失败，请选择 PNG、JPG 或 BMP。");return false;}
+    // Paired artwork keeps the full static canvas as the reference viewport.
+    // Cropping only the idle image would enlarge it relative to every animation.
+    if(!LoadPngImage(path,target*2,target,next,a.settings.motionPath.empty())){Notify(L"图片加载失败，请选择 PNG、JPG 或 BMP。");return false;}
     Trace(L"image-decoded");int x=a.settings.posX,y=a.settings.posY;
     if(a.image.dc && !center){x+=(a.image.width-next.width)/2;y+=a.image.height-next.height;}
     a.image.Reset();a.image=next;
@@ -219,7 +233,71 @@ bool ApplyImage(const std::wstring& path,bool center=false){
     ClampPosition(x,y,next.width,next.height);Trace(L"image-place");Place(x,y);Trace(L"image-placed");
     POINT destination{x,y},source{};SIZE size{next.width,next.height};BLENDFUNCTION blend{AC_SRC_OVER,0,255,AC_SRC_ALPHA};
     if(!UpdateLayeredWindow(a.pet,nullptr,&destination,&size,next.dc,&source,0,&blend,ULW_ALPHA))return false;
-    ShowWindow(a.pet,SW_SHOWNOACTIVATE);a.settings.skinPath=path;UpdateAnimation();Trace(L"image-visible");return true;
+    ShowWindow(a.pet,SW_SHOWNOACTIVATE);a.settings.skinPath=path;
+    a.motionImage.Reset();a.motionVisible=false;a.motionFailed=false;
+    a.motion.Configure(a.settings.motionPath,a.image.width,a.image.height,a.settings.motionSpeed,a.settings.motionPingPong);SyncMotion();
+    UpdateAnimation();Trace(L"image-visible");return true;
+}
+void DrawPet(const PetImage& image){
+    POINT source{};SIZE size{image.width,image.height};BLENDFUNCTION blend{AC_SRC_OVER,0,255,AC_SRC_ALPHA};
+    UpdateLayeredWindow(a.pet,nullptr,nullptr,&size,image.dc,&source,0,&blend,ULW_ALPHA);
+}
+void SyncMotion(){
+    const bool play=!a.settings.motionPath.empty()&&a.snapshot.valid&&a.snapshot.status==PlayStatus::Playing;
+    a.motion.Play(play);
+    if(a.motion.Active()&&!a.motionFailed)SetTimer(a.pet,7,a.settings.gameMode?50:20,nullptr);
+    else {KillTimer(a.pet,7);if(a.motionVisible){DrawPet(a.image);a.motionVisible=false;}}
+}
+bool SelectSkin(const SkinItem& item){
+    const auto previousMotion=a.settings.motionPath;
+    const int previousSpeed=a.settings.motionSpeed;const bool previousBounce=a.settings.motionPingPong;
+    a.settings.motionPath=item.motionPath;
+    a.settings.motionSpeed=item.motionSpeed;a.settings.motionPingPong=item.motionPingPong;
+    if(!ApplyImage(item.path)){a.settings.motionPath=previousMotion;a.settings.motionSpeed=previousSpeed;a.settings.motionPingPong=previousBounce;return false;}
+    a.settings.presetPath=item.presetFile.empty()?L"":std::filesystem::path(item.presetFile).filename().wstring();
+    return true;
+}
+std::wstring CurrentSkinName(){return SkinDisplayName(a.settings.presetPath.empty()?a.settings.skinPath:(std::filesystem::path(SkinFolderBesideExe())/a.settings.presetPath).wstring());}
+bool SaveCurrentPair(const std::wstring& motion){
+    SkinItem pair;if(!SavePairedPreset(a.settings.skinPath,motion,CurrentSkinName(),pair,a.settings.motionSpeed,a.settings.motionPingPong))return false;
+    if(!SelectSkin(pair))return false;
+    a.skins=ScanSkins();Save();return true;
+}
+void ChooseMotion(){
+    a.busy=true;wchar_t path[32768]{};OPENFILENAMEW file{sizeof(file)};
+    file.hwndOwner=a.panel;file.lpstrFilter=L"动态皮肤（GIF / APNG / MP4）\0*.gif;*.apng;*.png;*.mp4\0\0";
+    file.lpstrFile=path;file.nMaxFile=32768;file.Flags=OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST|OFN_NOCHANGEDIR;
+    file.lpstrTitle=L"选择播放时的动态皮肤（静音循环）";
+    if(GetOpenFileNameW(&file)){
+        try{
+            namespace fs=std::filesystem;const fs::path input(path);
+            auto ext=input.extension().wstring();for(auto& c:ext)c=(wchar_t)towlower(c);
+            if(ext!=L".gif"&&ext!=L".apng"&&ext!=L".png"&&ext!=L".mp4")throw std::runtime_error("Unsupported file");
+            if(ext==L".apng"||ext==L".png")ReadApng(path);
+            if(!SaveCurrentPair(path))throw std::runtime_error("Cannot save pair");
+            RenameSkin();
+            Notify(L"已保存静态＋动态组合预设；暂停后播完当前一轮再切回静态图。");
+        }catch(...){Notify(L"组合保存失败。请选择有效 GIF、APNG 或 MP4（不超过 256 MB）；普通 PNG 不属于动态素材。");}
+    }a.busy=false;
+}
+INT_PTR CALLBACK SizeProc(HWND dialog,UINT msg,WPARAM w,LPARAM){
+    auto apply=[&]{const int value=(int)SendDlgItemMessageW(dialog,1101,TBM_GETPOS,0,0);
+        const auto text=std::to_wstring(value)+L" 逻辑像素";SetDlgItemTextW(dialog,1102,text.c_str());
+        if(a.settings.petHeight!=value){const int before=a.settings.petHeight;a.settings.petHeight=value;
+            if(!ApplyImage(a.settings.skinPath))a.settings.petHeight=before;}};
+    if(msg==WM_INITDIALOG){SetWindowLongPtrW(dialog,DWLP_USER,a.settings.petHeight);
+        SendDlgItemMessageW(dialog,1101,TBM_SETRANGE,TRUE,MAKELPARAM(100,600));
+        SendDlgItemMessageW(dialog,1101,TBM_SETPOS,TRUE,a.settings.petHeight);
+        SendDlgItemMessageW(dialog,1101,TBM_SETPAGESIZE,0,20);apply();SetTimer(dialog,1,100,nullptr);return TRUE;}
+    if(msg==WM_TIMER&&w==1){apply();return TRUE;}
+    if(msg==WM_HSCROLL){const auto text=std::to_wstring(SendDlgItemMessageW(dialog,1101,TBM_GETPOS,0,0))+L" 逻辑像素";SetDlgItemTextW(dialog,1102,text.c_str());return TRUE;}
+    if(msg==WM_COMMAND){
+        if(LOWORD(w)==1103){SendDlgItemMessageW(dialog,1101,TBM_SETPOS,TRUE,300);apply();return TRUE;}
+        if(LOWORD(w)==IDOK){apply();Save();EndDialog(dialog,IDOK);return TRUE;}
+        if(LOWORD(w)==IDCANCEL){const int original=(int)GetWindowLongPtrW(dialog,DWLP_USER);a.settings.petHeight=original;ApplyImage(a.settings.skinPath);EndDialog(dialog,IDCANCEL);return TRUE;}
+    }
+    if(msg==WM_CLOSE){SendMessageW(dialog,WM_COMMAND,IDCANCEL,0);return TRUE;}
+    if(msg==WM_DESTROY)KillTimer(dialog,1);return FALSE;
 }
 INT_PTR CALLBACK SkinNameProc(HWND dialog,UINT msg,WPARAM w,LPARAM l){
     if(msg==WM_INITDIALOG){auto text=(std::wstring*)l;SetWindowLongPtrW(dialog,DWLP_USER,l);
@@ -234,10 +312,11 @@ INT_PTR CALLBACK SkinNameProc(HWND dialog,UINT msg,WPARAM w,LPARAM l){
     if(msg==WM_CLOSE){EndDialog(dialog,IDCANCEL);return TRUE;}return FALSE;
 }
 void RenameSkin(){
-    const bool wasBusy=a.busy;a.busy=true;auto name=SkinDisplayName(a.settings.skinPath);
+    const bool wasBusy=a.busy;a.busy=true;auto name=CurrentSkinName();
     const auto result=DialogBoxParamW(a.instance,MAKEINTRESOURCEW(101),a.panel,SkinNameProc,(LPARAM)&name);
     if(result==IDOK){
-        if(SetSkinDisplayName(a.settings.skinPath,name)){a.skins=ScanSkins();Notify(L"已保存皮肤名称："+name);}
+        const auto named=a.settings.presetPath.empty()?a.settings.skinPath:(std::filesystem::path(SkinFolderBesideExe())/a.settings.presetPath).wstring();
+        if(SetSkinDisplayName(named,name)){a.skins=ScanSkins();Notify(L"已保存皮肤名称："+name);}
         else Notify(L"皮肤名称保存失败，请检查程序文件夹写入权限。");
     } else if(result==-1)Notify(L"无法打开皮肤命名窗口。");
     a.busy=wasBusy;SetForegroundWindow(a.panel);
@@ -247,7 +326,7 @@ void ChooseImage(){
     file.hwndOwner=a.panel;file.lpstrFilter=L"图片（PNG / JPG / BMP）\0*.png;*.jpg;*.jpeg;*.bmp\0所有文件\0*.*\0";
     file.lpstrFile=path;file.nMaxFile=32768;file.Flags=OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST|OFN_NOCHANGEDIR;
     file.lpstrTitle=L"选择桌宠图片（推荐透明 PNG）";
-    if(GetOpenFileNameW(&file)&&ApplyImage(path)){
+    if(GetOpenFileNameW(&file)&&SelectSkin({path,L"",L"",L""})){
         std::wstring preset;
         if(SaveSkinPreset(path,preset)){
             a.settings.skinPath=preset;a.skins=ScanSkins();
@@ -297,15 +376,33 @@ void Players(){
     for(size_t i=0;i<a.menuSessions.size()&&i<500;++i){const auto& s=a.menuSessions[i];auto label=s.appName+(s.playing?L"  · 正在播放":L"");
         AppendMenuW(menu,MF_STRING|(selected==s.id?MF_CHECKED:0),CmdSession+(UINT)i,label.c_str());}
     if(a.menuSessions.empty())AppendMenuW(menu,MF_STRING|MF_GRAYED,0,L"没有会话：请先在播放器中播放音乐");
+    AppendMenuW(menu,MF_SEPARATOR,0,nullptr);
+    auto modes=CreatePopupMenu();
+    AppendMenuW(modes,MF_STRING|(a.snapshot.canShuffle?0:MF_GRAYED)|(a.snapshot.shuffle==0?MF_CHECKED:0),CmdMode,L"关闭随机播放");
+    AppendMenuW(modes,MF_STRING|(a.snapshot.canShuffle?0:MF_GRAYED)|(a.snapshot.shuffle==1?MF_CHECKED:0),CmdMode+1,L"随机播放");
+    AppendMenuW(modes,MF_SEPARATOR,0,nullptr);
+    const wchar_t* names[]={L"不循环",L"单曲循环",L"列表循环"};
+    for(int i=0;i<3;++i)AppendMenuW(modes,MF_STRING|(a.snapshot.canRepeat?0:MF_GRAYED)|(a.snapshot.repeat==i?MF_CHECKED:0),CmdMode+2+i,names[i]);
+    if(!a.snapshot.canShuffle&&!a.snapshot.canRepeat)AppendMenuW(modes,MF_STRING|MF_GRAYED,0,L"当前播放器未开放模式控制");
+    AppendMenuW(menu,MF_POPUP,(UINT_PTR)modes,L"音乐播放模式");
     auto result=Popup(menu);if(result)Command(result);
 }
 void Appearance(){
     auto menu=CreatePopupMenu();AppendMenuW(menu,MF_STRING,CmdChoose,L"选择图片并保存为预设…");
     AppendMenuW(menu,MF_STRING,CmdSkinName,L"自定义当前皮肤名称…");
+    AppendMenuW(menu,MF_STRING,CmdMotionChoose,L"添加动态素材并保存组合预设…");
+    AppendMenuW(menu,MF_STRING,CmdPairSave,L"另存当前静态＋动态组合…");
+    auto speeds=CreatePopupMenu();for(int i=0;i<7;++i)AppendMenuW(speeds,MF_STRING|(a.settings.motionSpeed==motionSpeeds[i]?MF_CHECKED:0),CmdMotionSpeed+i,motionSpeedLabels[i]);
+    AppendMenuW(menu,MF_POPUP|(a.settings.motionPath.empty()?MF_GRAYED:0),(UINT_PTR)speeds,L"动画速度");
+    AppendMenuW(menu,MF_STRING|(a.settings.motionPath.empty()?MF_GRAYED:0)|(a.settings.motionPingPong?MF_CHECKED:0),CmdMotionBounce,L"往返播放");
+    AppendMenuW(menu,MF_STRING|(a.settings.motionPath.empty()?MF_GRAYED:0),CmdMotionClear,L"关闭动态皮肤（始终显示静态图）");
     a.skins=ScanSkins();if(!a.skins.empty())AppendMenuW(menu,MF_SEPARATOR,0,nullptr);
-    for(size_t i=0;i<a.skins.size()&&i<500;++i)AppendMenuW(menu,MF_STRING|(a.skins[i].path==a.settings.skinPath?MF_CHECKED:0),CmdSkin+(UINT)i,a.skins[i].label.c_str());
+    for(size_t i=0;i<a.skins.size()&&i<500;++i){const auto& skin=a.skins[i];
+        const bool selected=skin.presetFile.empty()?(a.settings.presetPath.empty()&&skin.path==a.settings.skinPath):std::filesystem::path(skin.presetFile).filename()==a.settings.presetPath;
+        auto label=skin.label+(skin.presetFile.empty()?L"":L" [组合]");
+        AppendMenuW(menu,MF_STRING|(selected?MF_CHECKED:0),CmdSkin+(UINT)i,label.c_str());}
     AppendMenuW(menu,MF_SEPARATOR,0,nullptr);
-    const int sizes[]={180,240,300,380,460};for(int size:sizes){auto label=std::to_wstring(size)+L" 像素";AppendMenuW(menu,MF_STRING|(a.settings.petHeight==size?MF_CHECKED:0),CmdSize+size,label.c_str());}
+    AppendMenuW(menu,MF_STRING,CmdSizeSlider,L"调整桌宠大小…");
     auto result=Popup(menu);if(result)Command(result);
 }
 void More(){
@@ -346,6 +443,22 @@ void UpdateAnimation(){
     if(emit&&!a.animating){a.animating=true;a.lastFrame=GetTickCount64();SetTimer(a.pet,1,a.settings.gameMode?50:33,nullptr);}
 }
 void Command(int id){
+    if((id>=CmdMotionSpeed&&id<CmdMotionSpeed+7)||id==CmdMotionBounce){
+        if(a.settings.motionPath.empty())return;
+        const int speed=id==CmdMotionBounce?a.settings.motionSpeed:motionSpeeds[id-CmdMotionSpeed];
+        const bool bounce=id==CmdMotionBounce?!a.settings.motionPingPong:a.settings.motionPingPong;
+        if(!a.settings.presetPath.empty()&&!SavePairedMotionOptions((std::filesystem::path(SkinFolderBesideExe())/a.settings.presetPath).wstring(),speed,bounce)){
+            Notify(L"动画设置保存失败，当前设置未更改。");return;}
+        a.settings.motionSpeed=speed;a.settings.motionPingPong=bounce;
+        a.motionFailed=false;a.motionVisible=false;DrawPet(a.image);
+        a.motion.Configure(a.settings.motionPath,a.image.width,a.image.height,speed,bounce);SyncMotion();Save();
+        return;
+    }
+    if(id==CmdMotionChoose){ChooseMotion();return;}
+    if(id==CmdMotionClear){a.settings.presetPath.clear();a.settings.motionPath.clear();ApplyImage(a.settings.skinPath);Save();return;}
+    if(id==CmdPairSave){if(SaveCurrentPair(a.settings.motionPath))RenameSkin();else Notify(L"组合预设保存失败，请检查素材文件和文件夹权限。");return;}
+    if(id==CmdSizeSlider){a.busy=true;DialogBoxParamW(a.instance,MAKEINTRESOURCEW(102),a.panel,SizeProc,0);a.busy=false;return;}
+    if(id>=CmdMode&&id<=CmdMode+4){a.media.Send(static_cast<MediaCommand>(CMD_SHUFFLE_OFF+id-CmdMode));return;}
     if(id==CmdAutoStart){
         const bool enabled=!IsAutoStartEnabled();
         if(!SetAutoStartEnabled(enabled))Notify(L"无法修改开机自启设置，请检查当前用户权限。");
@@ -366,7 +479,7 @@ void Command(int id){
         Save();Notify(L"已切换音符配色，新出现的音符将使用新颜色。");return;}
     if(id>=CmdHotkey&&id<=CmdHotkey+4){a.settings.hotkeyPreset=id-CmdHotkey;ConfigureShortcut();UpdateTray();Save();Notify(L"当前穿透快捷键："+ShortcutText());return;}
     if(id>=CmdSession&&id<CmdSession+500){const size_t i=id-CmdSession;if(i<a.menuSessions.size())a.media.Select(a.menuSessions[i].id);return;}
-    if(id>=CmdSkin&&id<CmdSkin+500){const size_t i=id-CmdSkin;if(i<a.skins.size()&&ApplyImage(a.skins[i].path))Save();return;}
+    if(id>=CmdSkin&&id<CmdSkin+500){const size_t i=id-CmdSkin;if(i<a.skins.size()&&SelectSkin(a.skins[i]))Save();return;}
     if(id>=CmdSize+100&&id<=CmdSize+600){a.settings.petHeight=id-CmdSize;ApplyImage(a.settings.skinPath);Save();return;}
     // Density command IDs are deliberately outside the size range.
     if(id>=901&&id<=903){a.settings.density=id-900;}
@@ -475,11 +588,20 @@ LRESULT CALLBACK PetProc(HWND h,UINT msg,WPARAM w,LPARAM l){
     case WM_CAPTURECHANGED:case WM_CANCELMODE:if(a.dragging){a.dragging=false;Save();}return 0;
     case WM_RBUTTONUP:{POINT p;GetCursorPos(&p);ShowPanel(p);return 0;}
     case RecoverMessage:Recover();return 0;
+    case WM_COMMAND:Command(LOWORD(w));return 0;
     case WM_HOTKEY:if(w==1&&a.hotkey)Command(CmdThrough);return 0;
-    case WM_APP_MEDIA_UPDATE:a.snapshot=a.media.Snapshot();UpdateAnimation();UpdateTray();if(IsWindowVisible(a.panel))InvalidateRect(a.panel,nullptr,FALSE);return 0;
+    case WM_APP_MEDIA_UPDATE:a.snapshot=a.media.Snapshot();SyncMotion();UpdateAnimation();UpdateTray();if(IsWindowVisible(a.panel))InvalidateRect(a.panel,nullptr,FALSE);return 0;
     case WM_APP+3:Notify(L"播放器未接受这次控制，请稍后重试。");return 0;
     case TrayMessage:{const UINT event=a.trayV4?LOWORD(l):(UINT)l;if(event==WM_CONTEXTMENU||event==NIN_SELECT||event==NIN_KEYSELECT||event==WM_RBUTTONUP){POINT p;GetCursorPos(&p);ShowPanel(p);}return 0;}
     case WM_TIMER:
+        if(w==7){
+            if(a.motion.Failed()){a.motionFailed=true;KillTimer(h,7);DrawPet(a.image);a.motionVisible=false;Notify(L"动态皮肤解码或缓存失败，已显示静态图。可更换素材、关闭往返或调小尺寸（往返缓存上限 128 MB）。");return 0;}
+            if(!a.motion.Active()){KillTimer(h,7);if(a.motionVisible)DrawPet(a.image);a.motionVisible=false;return 0;}
+            std::vector<BYTE> pixels;if(a.motion.Frame(pixels)){
+                if(!a.motionImage.dc)CreateDib(a.image.width,a.image.height,a.motionImage);
+                if(a.motionImage.dc&&pixels.size()==size_t(a.image.width)*a.image.height*4){memcpy(a.motionImage.bits,pixels.data(),pixels.size());DrawPet(a.motionImage);a.motionVisible=true;}
+            }return 0;
+        }
         if(w==1){const auto now=GetTickCount64();const double dt=std::min(.1,(now-a.lastFrame)/1000.);a.lastFrame=now;a.preview=now<a.previewUntil;UpdateAnimation();
             if(a.notes.Tick(dt))a.notes.Render();else{KillTimer(h,1);a.animating=false;a.notes.Hide();}return 0;}
         if(w==6){AppSearchResults();return 0;}
@@ -496,7 +618,7 @@ LRESULT CALLBACK PetProc(HWND h,UINT msg,WPARAM w,LPARAM l){
     case WM_ERASEBKGND:return 1;
     case WM_DESTROY:
         if(a.shuttingDown)return 0;a.shuttingDown=true;
-        KillTimer(h,1);KillTimer(h,2);KillTimer(h,5);KillTimer(h,6);RemovePropW(h,L"MusicPet.ActiveShortcut");UnregisterHotKey(h,1);a.media.Stop();
+        KillTimer(h,1);KillTimer(h,2);KillTimer(h,5);KillTimer(h,6);KillTimer(h,7);a.motion.Stop();a.motionImage.Reset();RemovePropW(h,L"MusicPet.ActiveShortcut");UnregisterHotKey(h,1);a.media.Stop();
         if(a.saveOnExit)Save();if(a.trayAdded){auto n=TrayData();Shell_NotifyIconW(NIM_DELETE,&n);a.trayAdded=false;}
         if(a.panel)DestroyWindow(a.panel);if(a.fx)DestroyWindow(a.fx);PostQuitMessage(0);return 0;
     }
@@ -504,7 +626,7 @@ LRESULT CALLBACK PetProc(HWND h,UINT msg,WPARAM w,LPARAM l){
 }
 int PngEncoder(CLSID& id){UINT count{},size{};GetImageEncodersSize(&count,&size);std::vector<BYTE> data(size);auto encoders=(ImageCodecInfo*)data.data();GetImageEncoders(count,size,encoders);for(UINT i=0;i<count;++i)if(wcscmp(encoders[i].MimeType,L"image/png")==0){id=encoders[i].Clsid;return 0;}return 1;}
 bool RenderPreview(){
-    PetImage pet;if(!LoadPngImage(ExeDir()+L"\\skins\\Ellie.png",600,420,pet))return false;
+    PetImage pet;if(!LoadPngImage(ExeDir()+L"\\skins\\大肥鱼.png",600,420,pet))return false;
     CLSID encoder;if(PngEncoder(encoder)){pet.Reset();return false;}
     bool ok=true;
     for(int theme=0;theme<2;++theme){
@@ -524,6 +646,7 @@ bool RenderPreview(){
 }
 }
 int APIENTRY wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR,int){
+    INITCOMMONCONTROLSEX common{sizeof(common),ICC_BAR_CLASSES};InitCommonControlsEx(&common);
     SetProcessDpiAwarenessContext(DPI_AWARENESS_CONTEXT_PER_MONITOR_AWARE_V2);
     const auto com=CoInitializeEx(nullptr,COINIT_APARTMENTTHREADED);
     GdiplusStartupInput input;ULONG_PTR token{};if(GdiplusStartup(&token,&input,nullptr)!=Ok)return 1;
@@ -539,7 +662,15 @@ int APIENTRY wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR,int){
         else MessageBoxW(nullptr,L"桌宠尚未完成启动，请稍后再次运行恢复。",L"音乐桌宠",MB_ICONINFORMATION);
         if(single)CloseHandle(single);GdiplusShutdown(token);if(SUCCEEDED(com))CoUninitialize();return 0;
     }
-    LoadSettings(a.settings);a.dpi=GetDpiForSystem();a.saveOnExit=quitAfter==0;
+    LoadSettings(a.settings);
+    if(!a.settings.presetPath.empty()){
+        SkinItem pair;const auto relative=std::filesystem::path(a.settings.presetPath).filename();
+        if(LoadPairedPreset((std::filesystem::path(SkinFolderBesideExe())/relative).wstring(),pair)){
+            a.settings.skinPath=pair.path;a.settings.motionPath=pair.motionPath;a.settings.presetPath=relative.wstring();
+            a.settings.motionSpeed=pair.motionSpeed;a.settings.motionPingPong=pair.motionPingPong;
+        }else {a.settings.presetPath.clear();a.settings.motionPath.clear();}
+    }
+    a.dpi=GetDpiForSystem();a.saveOnExit=quitAfter==0;
     WNDCLASSEXW wc{sizeof(wc)};wc.hInstance=instance;wc.hCursor=LoadCursorW(nullptr,IDC_ARROW);wc.lpfnWndProc=PetProc;wc.lpszClassName=L"MusicPet.Native.Pet";
     RegisterClassExW(&wc);wc.lpfnWndProc=FxProc;wc.lpszClassName=L"MusicPet.Native.Notes";RegisterClassExW(&wc);
     wc.lpfnWndProc=PanelProc;wc.lpszClassName=L"MusicPet.Native.Panel";wc.style=CS_DROPSHADOW;RegisterClassExW(&wc);
@@ -549,8 +680,8 @@ int APIENTRY wWinMain(HINSTANCE instance,HINSTANCE,LPWSTR,int){
     a.panel=CreateWindowExW(WS_EX_TOOLWINDOW|WS_EX_TOPMOST,L"MusicPet.Native.Panel",L"一起听歌 · 音乐桌宠",WS_POPUP,0,0,PanelW,PanelH,a.pet,nullptr,instance,nullptr);
     if(!a.fx||!a.pet||!a.panel){MessageBoxW(nullptr,L"窗口创建失败。",L"音乐桌宠",MB_ICONERROR);return 3;}
     Trace(L"windows-created");a.notes.Create(a.fx,200,200);auto imagePath=a.settings.skinPath;
-    if(imagePath.empty()||GetFileAttributesW(imagePath.c_str())==INVALID_FILE_ATTRIBUTES)imagePath=ExeDir()+L"\\skins\\Ellie.png";
-    if(!ApplyImage(imagePath)){MessageBoxW(nullptr,L"请把一张透明 PNG 命名为 Ellie.png 放入 skins 文件夹。",L"音乐桌宠",MB_ICONERROR);DestroyWindow(a.pet);a.image.Reset();GdiplusShutdown(token);return 4;}
+    if(imagePath.empty()||GetFileAttributesW(imagePath.c_str())==INVALID_FILE_ATTRIBUTES)imagePath=ExeDir()+L"\\skins\\大肥鱼.png";
+    if(!ApplyImage(imagePath)){MessageBoxW(nullptr,L"请把一张透明 PNG 命名为 大肥鱼.png 放入 skins 文件夹。",L"音乐桌宠",MB_ICONERROR);DestroyWindow(a.pet);a.image.Reset();GdiplusShutdown(token);return 4;}
     Trace(L"before-through");ApplyThrough();Trace(L"before-icon");a.icon=(HICON)LoadImageW(instance,MAKEINTRESOURCEW(1),IMAGE_ICON,32,32,LR_DEFAULTCOLOR);
     if(!a.icon)a.icon=CopyIcon(LoadIconW(nullptr,IDI_APPLICATION));Trace(L"before-tray");AddTray();Trace(L"after-tray");
     ConfigureShortcut();SetTimer(a.pet,5,5000,nullptr);UpdateTray();

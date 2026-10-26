@@ -1,0 +1,2 @@
+PASS: per-pair speed/bounce persistence, isolation, disable and name preservation
+PASS: paired persistence, names, independent same-image combinations, dedup, static-only selection, relative relocation and traversal rejection

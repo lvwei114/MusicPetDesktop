@@ -11,6 +11,8 @@ enum MediaCommand {
     CMD_TOGGLE = 1,
     CMD_NEXT = 2,
     CMD_PREV = 3,
+    CMD_SHUFFLE_OFF, CMD_SHUFFLE_ON,
+    CMD_REPEAT_OFF, CMD_REPEAT_TRACK, CMD_REPEAT_LIST,
 };
 
 class MediaWatcher {

@@ -24,6 +24,9 @@ struct MediaSnapshot {
     bool canToggle = false;
     bool canNext = false;
     bool canPrev = false;
+    bool canShuffle = false, canRepeat = false;
+    int shuffle = -1;                   // -1 unknown, 0 off, 1 on
+    int repeat = -1;                    // -1 unknown, 0 none, 1 track, 2 list
     double positionSec = 0.0;
     double durationSec = 0.0;
     uint64_t revision = 0;

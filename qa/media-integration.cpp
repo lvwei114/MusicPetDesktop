@@ -25,6 +25,9 @@ int main(){
         check_hresult(interop->GetForWindow(window,guid_of<SystemMediaTransportControls>(),put_abi(controls)));
         controls.IsPlayEnabled(true);controls.IsPauseEnabled(true);controls.IsNextEnabled(true);controls.IsPreviousEnabled(true);
         controls.IsEnabled(true);controls.PlaybackStatus(MediaPlaybackStatus::Playing);
+        controls.ShuffleEnabled(false);controls.AutoRepeatMode(MediaPlaybackAutoRepeatMode::None);
+        auto shuffleToken=controls.ShuffleEnabledChangeRequested([](auto const& sender,auto const& args){sender.ShuffleEnabled(args.RequestedShuffleEnabled());});
+        auto repeatToken=controls.AutoRepeatModeChangeRequested([](auto const& sender,auto const& args){sender.AutoRepeatMode(args.RequestedAutoRepeatMode());});
         auto updater=controls.DisplayUpdater();updater.Type(MediaPlaybackType::Music);updater.MusicProperties().Title(L"MusicPet integration track");updater.MusicProperties().Artist(L"Local test fixture");updater.Update();
         SystemMediaTransportControlsTimelineProperties timeline;timeline.StartTime(0s);timeline.EndTime(180s);timeline.MinSeekTime(0s);timeline.MaxSeekTime(180s);timeline.Position(15s);controls.UpdateTimelineProperties(timeline);
         std::atomic<int> toggles{},nexts{};
@@ -42,6 +45,16 @@ int main(){
         report<<"PASS: real Windows SMTC session enumeration, metadata and playing state\n";
         auto state=watcher.Snapshot();if(!state.canToggle||!state.canNext||!state.canPrev||state.durationSec!=180||(state.positionSec<15||state.positionSec>25))throw std::runtime_error("Capabilities/timeline read failed");
         report<<"PASS: supported controls and timeline\n";
+        if(!wait([&]{auto s=watcher.Snapshot();return s.shuffle==0&&s.repeat==0;}))throw std::runtime_error("Playback modes not read");
+        if(watcher.Snapshot().canShuffle&&watcher.Snapshot().canRepeat){
+            watcher.Send(CMD_SHUFFLE_ON);watcher.Send(CMD_REPEAT_TRACK);
+            if(!wait([&]{auto s=watcher.Snapshot();return s.shuffle==1&&s.repeat==1;}))throw std::runtime_error("Shuffle/track repeat control failed");
+            watcher.Send(CMD_SHUFFLE_OFF);watcher.Send(CMD_REPEAT_LIST);
+            if(!wait([&]{auto s=watcher.Snapshot();return s.shuffle==0&&s.repeat==2;}))throw std::runtime_error("List repeat control failed");
+            watcher.Send(CMD_REPEAT_OFF);
+            if(!wait([&]{return watcher.Snapshot().repeat==0;}))throw std::runtime_error("Repeat off failed");
+            report<<"PASS: shuffle on/off, track/list/off repeat round trips\n";
+        }else report<<"LIMITATION: SMTC fixture did not expose writable playback modes; read verified\n";
         const double initial=watcher.Snapshot().positionSec;
         if(!wait([&]{return watcher.Snapshot().positionSec>initial+1.2;},3500))throw std::runtime_error("Sparse timeline did not advance");
         report<<"PASS: continuous progress from sparse publisher timeline\n";

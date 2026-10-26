@@ -5,7 +5,7 @@ from pathlib import Path
 root=Path(os.environ.get('MUSICPET_TEST_ROOT',str(Path(__file__).resolve().parents[1])))
 run=root/'qa'/'ui-run';run.mkdir(exist_ok=True)
 shutil.copy2(root/'MusicPet.exe',run/'MusicPet.exe');(run/'skins').mkdir(exist_ok=True)
-shutil.copy2(root/'skins'/'Ellie.png',run/'skins'/'Ellie.png')
+shutil.copy2(root/'skins'/'大肥鱼.png',run/'skins'/'大肥鱼.png')
 u=c.WinDLL('user32',use_last_error=True);s=c.WinDLL('shell32',use_last_error=True)
 u.SetProcessDpiAwarenessContext(c.c_void_p(-4))
 u.GetWindowThreadProcessId.argtypes=[w.HWND,c.POINTER(w.DWORD)]

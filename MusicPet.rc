@@ -1,5 +1,6 @@
 #pragma code_page(65001)
 #include <windows.h>
+#include <commctrl.h>
 1 ICON "MusicPet.ico"
 1 RT_MANIFEST "MusicPet.manifest"
 
@@ -12,4 +13,17 @@ BEGIN
     EDITTEXT 1001, 12, 28, 222, 15, ES_AUTOHSCROLL | WS_TABSTOP
     DEFPUSHBUTTON "确定", IDOK, 126, 62, 50, 16
     PUSHBUTTON "取消", IDCANCEL, 184, 62, 50, 16
+END
+
+102 DIALOGEX 0, 0, 270, 112
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "调整桌宠大小"
+FONT 9, "Microsoft YaHei UI"
+BEGIN
+    LTEXT "拖动预览大小，确定保存；取消恢复原大小。", -1, 12, 10, 246, 14
+    CONTROL "", 1101, "msctls_trackbar32", TBS_HORZ | WS_TABSTOP, 12, 30, 246, 28
+    LTEXT "", 1102, 12, 63, 130, 15
+    PUSHBUTTON "默认大小", 1103, 12, 87, 60, 15
+    DEFPUSHBUTTON "确定", IDOK, 148, 87, 50, 15
+    PUSHBUTTON "取消", IDCANCEL, 208, 87, 50, 15
 END

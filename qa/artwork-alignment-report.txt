@@ -1,0 +1,18 @@
+PASS: shared static/animated canvas alpha alignment at 64/131/300/525 px; forward and ping-pong
+PASS: different aspect ratios keep a fixed bottom baseline and horizontal center
+PASS: fixture.gif, loop, finish-cycle pause/resume, resize; unique frames 4
+PASS: fixture.mp4, loop, finish-cycle pause/resume, resize; unique frames 12
+PASS: fixture.apng, loop, finish-cycle pause/resume, resize; unique frames 4
+PASS: fixture.png, loop, finish-cycle pause/resume, resize; unique frames 4
+PASS: resume during final cycle cancels stop without restarting
+PASS: APNG source/over, background/previous disposal and alpha agree with Pillow reference pixels
+PASS: pause renders remaining frames, honors final frame delay, then becomes inactive
+PASS: APNG chunk bounds and CRC rejection
+PASS: fixture.gif half/2x speed remaining cycle 1609/406 ms
+PASS: fixture.apng half/2x speed remaining cycle 1594/406 ms
+PASS: fixture.mp4 half/2x speed remaining cycle 1984/500 ms
+PASS: fixture.gif ping-pong forward/reverse and pause after round trip
+PASS: fixture.apng ping-pong forward/reverse and pause after round trip
+PASS: fixture.mp4 ping-pong forward/reverse and pause after round trip
+PASS: 128 MB ping-pong cache cap fails safely
+PASS: invalid file fallback signal and clean shutdown

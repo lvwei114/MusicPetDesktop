@@ -66,3 +66,22 @@ vcpkg_installed/
 # test output & cache
 Testing/
 .cache/
+
+# Personal configuration, imported skins and local diagnostics
+/MusicPet.ini
+/MusicPet.diagnostics.ini
+/SkinNames.ini
+/skins/*
+!/skins/大肥鱼.png
+/backups/
+/legacy/
+/signing/
+/obj/
+/qa/*-run/
+/qa/run-*/
+/qa/motion-fixtures/
+/qa/*.png
+/qa/*.json
+*.pfx
+*.p12
+*.key
