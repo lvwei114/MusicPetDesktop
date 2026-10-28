@@ -2,6 +2,12 @@
 
 原生 Windows 音乐桌宠，支持静态图片，以及音乐播放时的 GIF / APNG / MP4 动态皮肤。双击 **MusicPet.exe** 或 **启动桌宠.cmd** 使用。
 
+## 2026-10-28 更新
+
+新增内置 **mika** 组合预设。在「桌宠形象」中选择 mika，音乐播放时显示 APNG 动画，暂停后完成当前循环并恢复静态图。默认 1 倍速，关闭往返；支持自行调整并保存。默认启动形象仍为大肥鱼。
+
+组合文件为 `skins/mika.pet.ini`，素材在 `skins/mika/`，移动时请保留整个 skins 目录。素材由用户提供，其授权独立于源码 MIT 许可。
+
 ## 动画速度与往返播放
 
 ### 静态／动态画布对齐修复
@@ -18,7 +24,7 @@
 
 本次验证记录：`qa/motion-playback-options-report.txt`、`qa/pair-playback-options-report.txt`、`qa/playback-options-ui-report.json`。界面测试副本仅更换窗口/互斥锁命名空间及托盘 GUID，以避开正在运行的旧实例。
 
-最新版已打包为 **MusicPet-2026.10.26-win-x64.zip**。请从 [Releases](https://github.com/lvwei114/MusicPetDesktop/releases/latest) 下载并完整解压，退出旧桌宠后运行 `MusicPet.exe`。本包未签名，Windows SmartScreen 可能提示。
+最新版已打包为 **MusicPet-2026.10.28-win-x64.zip**。请从 [Releases](https://github.com/lvwei114/MusicPetDesktop/releases/latest) 下载并完整解压，退出旧桌宠后运行 `MusicPet.exe`。本包未签名，Windows SmartScreen 可能提示。
 
 ## 2026-10-26 更新
 

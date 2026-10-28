@@ -1,0 +1,3 @@
+PASS: mika preset name, relative paths, default options and menu scan
+PASS: static decode and 640x832 / 73-frame APNG parse
+PASS: animation at static viewport, changing frames=52, finish-cycle pause

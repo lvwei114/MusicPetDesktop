@@ -85,3 +85,10 @@ Testing/
 *.pfx
 *.p12
 *.key
+
+# Bundled mika preset
+!/skins/mika.pet.ini
+!/skins/mika/
+/skins/mika/*
+!/skins/mika/frame_0001.png
+!/skins/mika/mika.apng
