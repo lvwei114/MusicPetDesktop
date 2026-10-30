@@ -1,0 +1,20 @@
+{
+  "archive": "MusicPet-2026.10.30-win-x64.zip",
+  "bytes": 30412567,
+  "sha256": "d5ca238732f111060cc4c5f69eb9acb42525d6ba7e5d31cb2a6bf56bb1be296c",
+  "exeSha256": "5fa21c4d6f2d48679d33f8b76694abcfcd46c06bf8c56c3bc046dd6b89ac3640",
+  "files": [
+    "LICENSE",
+    "启动桌宠.cmd",
+    "恢复桌宠.cmd",
+    "预览效果.cmd",
+    "skins/大肥鱼.png",
+    "skins/mika.pet.ini",
+    "skins/mika/frame_0001.png",
+    "skins/mika/mika.apng",
+    "MusicPet.exe",
+    "使用说明.txt",
+    "SHA256SUMS.txt"
+  ],
+  "zipVerified": true
+}

@@ -2,6 +2,16 @@
 
 原生 Windows 音乐桌宠，支持静态图片，以及音乐播放时的 GIF / APNG / MP4 动态皮肤。双击 **MusicPet.exe** 或 **启动桌宠.cmd** 使用。
 
+## 2026-10-30：经典分页控制面板
+
+右键桌宠或点击托盘图标打开面板，按「听歌 / 桌宠 / 音符 / 设置」四页组织原有功能。听歌页直接控制上一首、播放暂停、下一首、随机与循环，并选择播放器；桌宠页集中管理预设、静态与动态素材、动画速度和往返播放；音符页调整开关、数量与配色；设置页保留穿透、自启、快捷键、位置锁定、游戏模式和软件启动配置。托盘注册失败时显示重试按钮。
+
+桌宠页可直接拖动尺寸滑动条，松开保存；拖动时按 Esc 撤销本次调整。也可点击尺寸数值打开原有大小对话框。关闭当前动态不会删除已保存组合，从预设库重选组合即可恢复。
+
+支持 Tab / Shift+Tab 选择控件、Enter / 空格操作、Ctrl+Tab / Ctrl+Shift+Tab 切页；焦点在页签时可用左右键、Home / End 切页，焦点在尺寸滑动条时可用左右键调整。面板按内容改变高度，屏幕空间不足时缩小显示比例，以保持全部控件可见。
+
+下载 [v2026.10.30](https://github.com/lvwei114/MusicPetDesktop/releases/tag/v2026.10.30) 的完整压缩包并解压，退出旧实例后运行包内 `MusicPet.exe`。本地构建名为 `MusicPet-next.exe`，分发时重命名为 `MusicPet.exe`。本包未签名。原生面板验证入口为 `qa/build-classic-panel-test.bat`，报告为 `qa/classic-panel-report.txt`，四页实际绘制预览位于本地 `qa/run-classic-panel/`；未改动音乐会话与动画解码实现。
+
 ## 2026-10-28 更新
 
 新增内置 **mika** 组合预设。在「桌宠形象」中选择 mika，音乐播放时显示 APNG 动画，暂停后完成当前循环并恢复静态图。默认 1 倍速，关闭往返；支持自行调整并保存。默认启动形象仍为大肥鱼。
@@ -24,7 +34,7 @@
 
 本次验证记录：`qa/motion-playback-options-report.txt`、`qa/pair-playback-options-report.txt`、`qa/playback-options-ui-report.json`。界面测试副本仅更换窗口/互斥锁命名空间及托盘 GUID，以避开正在运行的旧实例。
 
-最新版已打包为 **MusicPet-2026.10.28-win-x64.zip**。请从 [Releases](https://github.com/lvwei114/MusicPetDesktop/releases/latest) 下载并完整解压，退出旧桌宠后运行 `MusicPet.exe`。本包未签名，Windows SmartScreen 可能提示。
+该历史版本分发包为 **MusicPet-2026.10.28-win-x64.zip**。请从 [Releases](https://github.com/lvwei114/MusicPetDesktop/releases/latest) 下载当前最新版并完整解压，退出旧桌宠后运行 `MusicPet.exe`。本包未签名，Windows SmartScreen 可能提示。
 
 ## 2026-10-26 更新
 

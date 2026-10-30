@@ -25,7 +25,7 @@
 #pragma comment(lib,"comdlg32.lib")
 using namespace Gdiplus;
 namespace {
-constexpr int PanelW=344, PanelH=478;
+constexpr int PanelW=368, PanelH=352;
 constexpr UINT TrayMessage=WM_APP_TRAY, RecoverMessage=WM_APP+5;
 // Stable identity lets Explorer retain the user's notification-area preference.
 constexpr GUID TrayGuid={0xd43878c2,0x6d9a,0x471f,{0xa3,0xa1,0x79,0x67,0xd0,0x6e,0x28,0xb4}};
@@ -61,7 +61,7 @@ struct State {
     std::future<std::vector<LaunchTarget>> appSearch;
     std::vector<LaunchTarget> launchTargets;
 } a;
-const Color ink(255,34,52,60), muted(255,112,128,132), teal(255,66,139,133), paper(255,248,250,248), line(255,225,233,229);
+const Color ink(255,31,32,36), muted(255,107,110,121), teal(255,43,108,176), paper(255,255,255,255), line(255,227,227,233);
 void Command(int id);
 void ShowPanel(POINT point);
 void UpdateAnimation();
@@ -111,65 +111,7 @@ std::wstring StatusText(){
     if(!a.snapshot.valid) return a.media.SelectedId().empty()?L"等待音乐播放":L"等待选定的播放器";
     switch(a.snapshot.status){case PlayStatus::Playing:return L"正在播放";case PlayStatus::Paused:return L"已暂停";case PlayStatus::Stopped:return L"已停止";default:return L"等待播放状态";}
 }
-void Toggle(Graphics& g,float x,float y,bool on) {
-    FillRound(g,{x,y,32,19},9.5f,on?teal:Color(255,210,219,216));SolidBrush white(Color(255,255,255,255));g.FillEllipse(&white,x+(on?15.f:3.f),y+3,13.f,13.f);
-}
-struct Hit {int id;RectF rect;};
-const Hit hits[]={{10,{300,15,28,28}},{11,{20,57,304,29}},{1,{67,159,46,46}},{2,{144,155,56,56}},{3,{231,159,46,46}},
-                  {12,{16,255,312,51}},{13,{16,308,312,50}},{14,{16,360,312,50}},{15,{18,430,160,30}},{16,{259,430,67,30}}};
-bool Enabled(int id){if(id==1)return a.snapshot.canPrev;if(id==2)return a.snapshot.canToggle;if(id==3)return a.snapshot.canNext;return true;}
-void PaintPanel(Graphics& g) {
-    g.SetSmoothingMode(SmoothingModeAntiAlias);g.SetTextRenderingHint(TextRenderingHintAntiAliasGridFit);
-    SolidBrush panelBackground(paper);g.FillRectangle(&panelBackground,0,0,PanelW,PanelH);
-    // Quiet mint header, warm accent, generous space around media controls.
-    FillRound(g,{20,20,23,23},8,teal);DrawNoteGlyph(g,31.5f,31.5f,16,0,Color(255,255,255,255));
-    Text(g,L"一起听歌",{51,17,180,29},17,ink,true);
-    Text(g,L"MUSIC PET",{211,21,80,22},9,muted);
-    if(a.hover==10)FillRound(g,{300,15,28,28},8,Color(255,230,237,233));DrawIcon(g,4,314,29,muted);
-    FillRound(g,{20,57,304,29},9,a.hover==11?Color(255,224,237,231):Color(255,233,241,236));
-    SolidBrush dot(a.snapshot.status==PlayStatus::Playing?teal:Color(255,174,186,180));g.FillEllipse(&dot,30.f,68.f,6.f,6.f);
-    Text(g,a.snapshot.valid?a.snapshot.appName:L"选择播放器",{43,58,238,27},11,teal);
-    Text(g,L"⌄",{290,58,22,27},14,teal,false,StringAlignmentCenter);
-    const auto title=a.snapshot.valid&&!a.snapshot.title.empty()?a.snapshot.title:L"让音乐陪你待一会儿";
-    Text(g,title,{24,99,296,31},19,ink,true);
-    const auto subtitle=a.snapshot.reconnecting?StatusText():(a.snapshot.valid?(a.snapshot.artist.empty()?StatusText():a.snapshot.artist):L"播放音乐后，音符会轻轻飘起来");
-    Text(g,subtitle,{24,131,296,21},11,muted);
-    for(int id=1;id<=3;++id) {
-        const RectF r=id==1?RectF(67,159,46,46):id==2?RectF(144,155,56,56):RectF(231,159,46,46);
-        const bool enabled=Enabled(id);
-        const Color bg=id==2?(enabled?teal:Color(255,222,230,225)):(a.hover==id&&enabled?Color(255,229,238,232):Color(255,239,244,240));
-        SolidBrush b(bg);g.FillEllipse(&b,r);
-        DrawIcon(g,id,r.X+r.Width/2,r.Y+r.Height/2,id==2?Color(255,255,255,255):enabled?ink:Color(255,180,190,184));
-    }
-    FillRound(g,{25,226,294,3},1.5f,Color(255,223,232,225));
-    if(a.snapshot.durationSec>0){
-        const float width=(float)std::clamp(a.snapshot.positionSec/a.snapshot.durationSec,0.,1.)*294;
-        if(width>3)FillRound(g,{25,226,width,3},1.5f,teal);
-        Text(g,Time(a.snapshot.positionSec),{25,233,80,15},9,muted);
-        Text(g,Time(a.snapshot.durationSec),{239,233,80,15},9,muted,false,StringAlignmentFar);
-    } else Text(g,a.snapshot.reconnecting?L"正在等待新曲目进度…":(a.snapshot.valid?L"播放器未提供进度":L"可先用「音符预览」看看效果"),{25,233,294,15},9,muted);
-    for(int id=12;id<=14;++id) {
-        const float y=255+(id-12)*52.5f;
-        if(a.hover==id)FillRound(g,{16,y,312,51},10,Color(255,235,241,235));
-        FillRound(g,{25,y+9,31,31},9,Color(255,233,240,233));
-        DrawIcon(g,id==12?5:id==13?6:7,40.5f,y+24.5f,teal);
-        const wchar_t* labels[]={L"桌宠形象",L"音符效果",L"点击穿透"};
-        const wchar_t* desc[]={L"更换图片 · 调整大小",L"只随播放状态出现",a.trayAdded?L"开启后从托盘或再次启动恢复":L"托盘暂不可用 · 再次启动可恢复"};
-        Text(g,labels[id-12],{68,y+7,200,21},12,ink);
-        Text(g,desc[id-12],{68,y+28,210,16},9,muted);
-        if(id==12)Text(g,L"›",{293,y+10,23,29},22,muted,false,StringAlignmentCenter);
-        else Toggle(g,286,y+16,id==13?a.settings.effectsOn!=0:a.settings.clickThrough);
-    }
-    Pen separator(line,1);g.DrawLine(&separator,24.f,422.f,320.f,422.f);
-    if(a.hover==15)FillRound(g,{18,430,160,30},8,Color(255,232,240,233));
-    DrawIcon(g,8,34,445,muted);Text(g,L"更多设置",{49,430,120,30},11,muted);
-    if(a.hover==16)FillRound(g,{259,430,67,30},8,Color(255,245,229,225));
-    Text(g,L"退出",{270,430,42,30},11,a.hover==16?Color(255,173,91,80):muted,false,StringAlignmentCenter);
-    if(!a.notice.empty() && GetTickCount64()<a.noticeUntil) {
-        FillRound(g,{18,383,308,34},9,Color(255,43,66,66));Text(g,a.notice,{29,383,286,34},10,Color(255,255,255,255));
-    }
-}
-int HitAt(LPARAM value){const float scale=a.panelDpi/96.f;PointF p(GET_X_LPARAM(value)/scale,GET_Y_LPARAM(value)/scale);for(const auto& h:hits)if(h.rect.Contains(p))return h.id;return 0;}
+#include "panel-ui.h"
 void Notify(const std::wstring& text){a.notice=text;a.noticeUntil=GetTickCount64()+3500;if(IsWindowVisible(a.panel))InvalidateRect(a.panel,nullptr,FALSE);}
 void Save(){if(a.saveOnExit)SaveSettings(a.settings);}
 NOTIFYICONDATAW TrayData(){
@@ -337,7 +279,9 @@ void ChooseImage(){
     a.busy=false;SetForegroundWindow(a.panel);InvalidateRect(a.panel,nullptr,FALSE);
 }
 UINT Popup(HMENU menu){
-    a.busy=true;POINT p{};GetCursorPos(&p);SetForegroundWindow(a.panel);
+    a.busy=true;POINT p{};GetCursorPos(&p);
+    if(panelKeyboard){BuildPanelHits();const auto r=HitRect(a.hover);p={(LONG)(r.X*a.panelDpi/96.f),(LONG)(r.GetBottom()*a.panelDpi/96.f)};ClientToScreen(a.panel,&p);}
+    SetForegroundWindow(a.panel);
     const UINT result=TrackPopupMenu(menu,TPM_RETURNCMD|TPM_NONOTIFY|TPM_RIGHTBUTTON,p.x,p.y,0,a.panel,nullptr);
     DestroyMenu(menu);a.busy=false;return result;
 }
@@ -346,7 +290,7 @@ void ChooseProgram(){
     file.hwndOwner=a.panel;file.lpstrFilter=L"程序或快捷方式（EXE / LNK）\0*.exe;*.lnk\0";
     file.lpstrFile=path;file.nMaxFile=32768;file.Flags=OFN_FILEMUSTEXIST|OFN_PATHMUSTEXIST|OFN_NOCHANGEDIR|OFN_NODEREFERENCELINKS;
     file.lpstrTitle=L"选择桌宠要打开的软件";
-    if(GetOpenFileNameW(&file)&&IsLaunchTarget(path)){a.settings.launchPath=path;Save();Notify(L"已保存指定软件，可在更多设置中打开。");}
+    if(GetOpenFileNameW(&file)&&IsLaunchTarget(path)){a.settings.launchPath=path;Save();Notify(L"已保存指定软件，可在设置页中打开。");}
     a.busy=false;SetForegroundWindow(a.panel);
 }
 void StartAppSearch(){
@@ -468,7 +412,7 @@ void Command(int id){
     if(id==CmdTrayRetry){AddTray();UpdateTray();Notify(a.trayAdded?L"托盘注册成功，请查看隐藏图标区域。":L"系统仍拒绝托盘注册，请查看诊断文件。");InvalidateRect(a.panel,nullptr,FALSE);return;}
     if(id==CmdSkinName){RenameSkin();return;}
     if(id>=CmdLaunchFound&&id<CmdLaunchFound+200){size_t i=id-CmdLaunchFound;if(i<a.launchTargets.size()){
-        a.settings.launchPath=a.launchTargets[i].path;Save();Notify(L"已保存指定软件，可从更多设置打开。");}return;}
+        a.settings.launchPath=a.launchTargets[i].path;Save();Notify(L"已保存指定软件，可从设置页打开。");}return;}
     if(id==CmdLaunchChoose){ChooseProgram();return;}
     if(id==CmdLaunchFind){StartAppSearch();return;}
     if(id==CmdLaunchClear){a.settings.launchPath.clear();Save();Notify(L"已清除指定软件。");return;}
@@ -497,18 +441,85 @@ void Command(int id){
     }
     a.notes.Configure(a.settings.effectsOn?(a.settings.gameMode?1:a.settings.density):0,ComputeNoteLayout(a.image.width,a.image.height,a.dpi).scale);UpdateAnimation();UpdateTray();Save();InvalidateRect(a.panel,nullptr,FALSE);
 }
+void RefreshPanelState(){panelAutoStart=IsAutoStartEnabled();panelSkinName=CurrentSkinName();BuildPanelHits();}
+void ResizePanel(){
+    if(!a.panel)return;
+    RECT r{};GetWindowRect(a.panel,&r);MONITORINFO monitor{sizeof(monitor)};
+    GetMonitorInfoW(MonitorFromWindow(a.panel,MONITOR_DEFAULTTONEAREST),&monitor);
+    a.panelDpi=FitPanelDpi(panelRequestedDpi,monitor.rcWork);
+    const int width=MulDiv(PanelW,a.panelDpi,96),height=MulDiv(PanelHeight(),a.panelDpi,96);
+    const int x=std::clamp((int)r.left,(int)monitor.rcWork.left+8,std::max((int)monitor.rcWork.left+8,(int)monitor.rcWork.right-width-8));
+    const int y=std::clamp((int)r.top,(int)monitor.rcWork.top+8,std::max((int)monitor.rcWork.top+8,(int)monitor.rcWork.bottom-height-8));
+    SetWindowPos(a.panel,HWND_TOPMOST,x,y,width,height,SWP_NOACTIVATE);
+    SetWindowRgn(a.panel,CreateRoundRectRgn(0,0,width+1,height+1,MulDiv(24,a.panelDpi,96),MulDiv(24,a.panelDpi,96)),TRUE);
+    InvalidateRect(a.panel,nullptr,FALSE);
+}
+void SetPanelPage(int page){
+    panelPage=std::clamp(page,0,3);a.hover=UiTabMusic+panelPage;a.pressed=0;
+    RefreshPanelState();ResizePanel();
+}
+void PanelOptions(int id){
+    auto menu=CreatePopupMenu();
+    if(id==UiPreset){
+        a.skins=ScanSkins();
+        for(size_t i=0;i<a.skins.size()&&i<500;++i){const auto& skin=a.skins[i];
+            const bool selected=skin.presetFile.empty()?(a.settings.presetPath.empty()&&skin.path==a.settings.skinPath):std::filesystem::path(skin.presetFile).filename()==a.settings.presetPath;
+            auto label=skin.label+(skin.presetFile.empty()?L"":L" [组合]");
+            AppendMenuW(menu,MF_STRING|(selected?MF_CHECKED:0),CmdSkin+(UINT)i,label.c_str());
+        }
+        if(a.skins.empty())AppendMenuW(menu,MF_STRING|MF_GRAYED,0,L"暂无预设，请先选择图片");
+    }else if(id==UiSpeed){
+        for(int i=0;i<7;++i)AppendMenuW(menu,MF_STRING|(a.settings.motionSpeed==motionSpeeds[i]?MF_CHECKED:0),CmdMotionSpeed+i,motionSpeedLabels[i]);
+    }else if(id==UiShortcut){
+        for(int i=0;i<4;++i)AppendMenuW(menu,MF_STRING|(a.settings.hotkeyPreset==i?MF_CHECKED:0),CmdHotkey+i,shortcuts[i].label);
+        AppendMenuW(menu,MF_STRING|(a.settings.hotkeyPreset==4?MF_CHECKED:0),CmdHotkey+4,L"关闭全局快捷键");
+    }else if(id==UiRepeat){
+        const wchar_t* names[]={L"不循环",L"单曲循环",L"列表循环"};
+        for(int i=0;i<3;++i)AppendMenuW(menu,MF_STRING|(a.snapshot.repeat==i?MF_CHECKED:0),CmdMode+2+i,names[i]);
+    }
+    const auto result=Popup(menu);if(result)Command(result);
+}
 void ActivateHit(int id){
-    if(!Enabled(id))return;
-    if(id==1)a.media.Send(CMD_PREV);if(id==2)a.media.Send(CMD_TOGGLE);if(id==3)a.media.Send(CMD_NEXT);
-    if(id==10)ShowWindow(a.panel,SW_HIDE);if(id==11)Players();if(id==12)Appearance();if(id==13)Command(CmdEffects);if(id==14)Command(CmdThrough);if(id==15)More();if(id==16)Command(CmdExit);
+    if(!id||!Enabled(id))return;
+    if(id>=UiTabMusic&&id<=UiTabSettings){SetPanelPage(id-UiTabMusic);return;}
+    if(id==1)a.media.Send(CMD_PREV);else if(id==2)a.media.Send(CMD_TOGGLE);else if(id==3)a.media.Send(CMD_NEXT);
+    else if(id==10){ShowWindow(a.panel,SW_HIDE);return;}
+    else if(id==16){Command(CmdExit);return;}
+    else if(id==11)Players();
+    else if(id==UiPreset||id==UiSpeed||id==UiShortcut||id==UiRepeat)PanelOptions(id);
+    else if(id==UiShuffle)Command(CmdMode+(a.snapshot.shuffle==1?0:1));
+    else if(id==UiSize)Command(CmdSizeSlider);
+    else if(id>=UiDensityLight&&id<=UiDensityDense)Command(CmdDensity+1+id-UiDensityLight);
+    else if(id==UiPaletteDefault||id==UiPaletteImage)Command(CmdPalette+id-UiPaletteDefault);
+    else Command(id);
+    if(IsWindow(a.panel)){RefreshPanelState();InvalidateRect(a.panel,nullptr,FALSE);}
+}
+void ApplyPanelSize(int height){
+    height=std::clamp(height,100,600);
+    if(height!=a.settings.petHeight){const int previous=a.settings.petHeight;a.settings.petHeight=height;
+        if(!ApplyImage(a.settings.skinPath))a.settings.petHeight=previous;}
+    panelSizeAppliedAt=GetTickCount64();InvalidateRect(a.panel,nullptr,FALSE);
+}
+void DragPanelSize(LPARAM l,bool immediate=false){
+    const float x=GET_X_LPARAM(l)*96.f/a.panelDpi;
+    panelSizePending=std::clamp((int)std::lround(100+(x-24)*500/320),100,600);
+    if(immediate||GetTickCount64()-panelSizeAppliedAt>=100)ApplyPanelSize(panelSizePending);
+}
+void FinishPanelSize(bool cancel){
+    if(!panelSizeDragging)return;
+    panelSizeDragging=false;KillTimer(a.panel,4);
+    ApplyPanelSize(cancel?panelSizeOriginal:panelSizePending);
+    if(GetCapture()==a.panel)ReleaseCapture();
+    if(!cancel)Save();
 }
 void ShowPanel(POINT p){
-    a.snapshot=a.media.Snapshot();MONITORINFO m{sizeof(m)};GetMonitorInfoW(MonitorFromPoint(p,MONITOR_DEFAULTTONEAREST),&m);
-    a.panelDpi=(int)GetDpiForWindow(a.pet);const float scale=a.panelDpi/96.f;const int w=(int)(PanelW*scale),h=(int)(PanelH*scale);
+    a.snapshot=a.media.Snapshot();RefreshPanelState();panelKeyboard=false;MONITORINFO m{sizeof(m)};GetMonitorInfoW(MonitorFromPoint(p,MONITOR_DEFAULTTONEAREST),&m);
+    panelRequestedDpi=(int)GetDpiForWindow(a.pet);a.panelDpi=FitPanelDpi(panelRequestedDpi,m.rcWork);
+    const float scale=a.panelDpi/96.f;const int w=MulDiv(PanelW,a.panelDpi,96),h=MulDiv(PanelHeight(),a.panelDpi,96);
     int x=p.x-w-12,y=p.y-h/2; x=std::clamp(x,(int)m.rcWork.left+8,std::max((int)m.rcWork.left+8,(int)m.rcWork.right-w-8));
     y=std::clamp(y,(int)m.rcWork.top+8,std::max((int)m.rcWork.top+8,(int)m.rcWork.bottom-h-8));
     a.hover=0;a.pressed=0;SetWindowPos(a.panel,HWND_TOPMOST,x,y,w,h,SWP_SHOWWINDOW);
-    SetWindowRgn(a.panel,CreateRoundRectRgn(0,0,w+1,h+1,(int)(22*scale),(int)(22*scale)),TRUE);
+    SetWindowRgn(a.panel,CreateRoundRectRgn(0,0,w+1,h+1,(int)(24*scale),(int)(24*scale)),TRUE);
     SetForegroundWindow(a.panel);SetFocus(a.panel);InvalidateRect(a.panel,nullptr,FALSE);
     a.panelOpened=GetTickCount64();a.outsideButtonDown=true;SetTimer(a.panel,3,80,nullptr);
 }
@@ -549,12 +560,44 @@ LRESULT CALLBACK PanelProc(HWND h,UINT msg,WPARAM w,LPARAM l){
     case WM_PAINT:{PAINTSTRUCT ps;HDC dc=BeginPaint(h,&ps);RECT r;GetClientRect(h,&r);Bitmap buffer(std::max(1L,r.right),std::max(1L,r.bottom),PixelFormat32bppPARGB);
         {Graphics g(&buffer);g.ScaleTransform(a.panelDpi/96.f,a.panelDpi/96.f);PaintPanel(g);}Graphics output(dc);output.DrawImage(&buffer,0,0);EndPaint(h,&ps);return 0;}
     case WM_ERASEBKGND:return 1;
-    case WM_MOUSEMOVE:{int hit=HitAt(l);if(hit!=a.hover){a.hover=hit;InvalidateRect(h,nullptr,FALSE);}TRACKMOUSEEVENT t{sizeof(t),TME_LEAVE,h,0};TrackMouseEvent(&t);SetCursor(LoadCursorW(nullptr,hit&&Enabled(hit)?IDC_HAND:IDC_ARROW));return 0;}
-    case WM_MOUSELEAVE:a.hover=0;InvalidateRect(h,nullptr,FALSE);return 0;
-    case WM_LBUTTONDOWN:a.pressed=HitAt(l);SetCapture(h);return 0;
-    case WM_LBUTTONUP:{int hit=HitAt(l),pressed=a.pressed;a.pressed=0;ReleaseCapture();if(hit==pressed)ActivateHit(hit);return 0;}
-    case WM_KEYDOWN:if(w==VK_ESCAPE){ShowWindow(h,SW_HIDE);return 0;}if(w==VK_TAB){size_t index=0;for(size_t i=0;i<std::size(hits);++i)if(hits[i].id==a.hover)index=i+1;for(size_t i=0;i<std::size(hits);++i){int id=hits[(index+i)%std::size(hits)].id;if(Enabled(id)){a.hover=id;break;}}InvalidateRect(h,nullptr,FALSE);return 0;}if(w==VK_RETURN||w==VK_SPACE){ActivateHit(a.hover);return 0;}break;
-    case WM_TIMER:if(w==3){
+    case WM_MOUSEMOVE:{
+        if(panelSizeDragging){DragPanelSize(l);return 0;}
+        panelKeyboard=false;int hit=HitAt(l);if(hit!=a.hover){a.hover=hit;InvalidateRect(h,nullptr,FALSE);}
+        TRACKMOUSEEVENT t{sizeof(t),TME_LEAVE,h,0};TrackMouseEvent(&t);
+        SetCursor(LoadCursorW(nullptr,hit&&Enabled(hit)?IDC_HAND:IDC_ARROW));return 0;
+    }
+    case WM_MOUSELEAVE:if(!panelSizeDragging&&!panelKeyboard){a.hover=0;InvalidateRect(h,nullptr,FALSE);}return 0;
+    case WM_LBUTTONDOWN:{
+        panelKeyboard=false;a.pressed=HitAt(l);a.hover=a.pressed;SetCapture(h);
+        if(a.pressed==UiSize){panelSizeDragging=true;panelSizeOriginal=a.settings.petHeight;panelSizePending=panelSizeOriginal;DragPanelSize(l,true);SetTimer(h,4,100,nullptr);}
+        InvalidateRect(h,nullptr,FALSE);return 0;
+    }
+    case WM_LBUTTONUP:{
+        if(panelSizeDragging){DragPanelSize(l);FinishPanelSize(false);a.pressed=0;return 0;}
+        int hit=HitAt(l),pressed=a.pressed;a.pressed=0;ReleaseCapture();if(hit==pressed)ActivateHit(hit);return 0;
+    }
+    case WM_CAPTURECHANGED:case WM_CANCELMODE:if(panelSizeDragging)FinishPanelSize(true);a.pressed=0;return 0;
+    case WM_KEYDOWN:{
+        panelKeyboard=true;
+        if(w==VK_ESCAPE){if(panelSizeDragging)FinishPanelSize(true);else ShowWindow(h,SW_HIDE);return 0;}
+        if(w==VK_TAB){
+            if(GetKeyState(VK_CONTROL)&0x8000){SetPanelPage((panelPage+((GetKeyState(VK_SHIFT)&0x8000)?3:1))%4);return 0;}
+            BuildPanelHits();const int count=(int)hits.size();int index=-1;for(int i=0;i<count;++i)if(hits[i].id==a.hover)index=i;
+            const int direction=(GetKeyState(VK_SHIFT)&0x8000)?-1:1;
+            if(index<0)index=direction==1?-1:0;
+            for(int i=1;i<=count;++i){const int candidate=hits[(index+direction*i+count*2)%count].id;if(Enabled(candidate)){a.hover=candidate;break;}}
+            InvalidateRect(h,nullptr,FALSE);return 0;
+        }
+        if((w==VK_LEFT||w==VK_RIGHT||w==VK_HOME||w==VK_END)&&a.hover>=UiTabMusic&&a.hover<=UiTabSettings){
+            SetPanelPage(w==VK_HOME?0:w==VK_END?3:(panelPage+(w==VK_LEFT?3:1))%4);return 0;
+        }
+        if(a.hover==UiSize&&(w==VK_LEFT||w==VK_RIGHT||w==VK_HOME||w==VK_END)){
+            ApplyPanelSize(w==VK_HOME?100:w==VK_END?600:a.settings.petHeight+(w==VK_LEFT?-10:10));Save();return 0;
+        }
+        if(w==VK_RETURN||w==VK_SPACE){ActivateHit(a.hover);return 0;}
+        break;
+    }
+    case WM_TIMER:if(w==4){if(panelSizeDragging)ApplyPanelSize(panelSizePending);return 0;}if(w==3){
         const bool down=(GetAsyncKeyState(VK_LBUTTON)&0x8000)||(GetAsyncKeyState(VK_RBUTTON)&0x8000);
         if(down&&!a.outsideButtonDown&&!a.busy&&GetTickCount64()-a.panelOpened>300){
             POINT p;RECT r;GetCursorPos(&p);GetWindowRect(h,&r);
@@ -562,17 +605,19 @@ LRESULT CALLBACK PanelProc(HWND h,UINT msg,WPARAM w,LPARAM l){
         }
         a.outsideButtonDown=down;return 0;
     }break;
-    case WM_SHOWWINDOW:if(!w)KillTimer(h,3);break;
+    case WM_SHOWWINDOW:if(!w){FinishPanelSize(true);KillTimer(h,3);}break;
     case WM_ACTIVATE:return 0;
     case WM_DPICHANGED:{
-        a.panelDpi=HIWORD(w);const auto suggested=(RECT*)l;
-        const int width=MulDiv(PanelW,a.panelDpi,96),height=MulDiv(PanelH,a.panelDpi,96);
+        panelRequestedDpi=HIWORD(w);const auto suggested=(RECT*)l;
+        MONITORINFO monitor{sizeof(monitor)};GetMonitorInfoW(MonitorFromRect(suggested,MONITOR_DEFAULTTONEAREST),&monitor);
+        a.panelDpi=FitPanelDpi(panelRequestedDpi,monitor.rcWork);
+        const int width=MulDiv(PanelW,a.panelDpi,96),height=MulDiv(PanelHeight(),a.panelDpi,96);
         int x=suggested->left,y=suggested->top;ClampPosition(x,y,width,height);
         SetWindowPos(h,HWND_TOPMOST,x,y,width,height,SWP_NOACTIVATE);
-        SetWindowRgn(h,CreateRoundRectRgn(0,0,width+1,height+1,MulDiv(22,a.panelDpi,96),MulDiv(22,a.panelDpi,96)),TRUE);
+        SetWindowRgn(h,CreateRoundRectRgn(0,0,width+1,height+1,MulDiv(24,a.panelDpi,96),MulDiv(24,a.panelDpi,96)),TRUE);
         InvalidateRect(h,nullptr,FALSE);return 0;
     }
-    case WM_CLOSE:ShowWindow(h,SW_HIDE);return 0;
+    case WM_CLOSE:FinishPanelSize(true);ShowWindow(h,SW_HIDE);return 0;
     }
     return DefWindowProcW(h,msg,w,l);
 }
@@ -588,7 +633,7 @@ LRESULT CALLBACK PetProc(HWND h,UINT msg,WPARAM w,LPARAM l){
     case WM_CAPTURECHANGED:case WM_CANCELMODE:if(a.dragging){a.dragging=false;Save();}return 0;
     case WM_RBUTTONUP:{POINT p;GetCursorPos(&p);ShowPanel(p);return 0;}
     case RecoverMessage:Recover();return 0;
-    case WM_COMMAND:Command(LOWORD(w));return 0;
+    case WM_COMMAND:Command(LOWORD(w));if(IsWindowVisible(a.panel)){RefreshPanelState();InvalidateRect(a.panel,nullptr,FALSE);}return 0;
     case WM_HOTKEY:if(w==1&&a.hotkey)Command(CmdThrough);return 0;
     case WM_APP_MEDIA_UPDATE:a.snapshot=a.media.Snapshot();SyncMotion();UpdateAnimation();UpdateTray();if(IsWindowVisible(a.panel))InvalidateRect(a.panel,nullptr,FALSE);return 0;
     case WM_APP+3:Notify(L"播放器未接受这次控制，请稍后重试。");return 0;

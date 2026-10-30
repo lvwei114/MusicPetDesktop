@@ -1,0 +1,6 @@
+PASS: four native page renders, control boundaries, non-overlap and mouse hit mapping at 96/120/144/168/192 DPI
+PASS: work-area fit through 300 percent scaling, short screens and negative monitor coordinates
+PASS: keyboard Tab, left/right and Home/End page navigation
+PASS: effect/density/palette, lock/clickthrough toggles and unavailable/reconnecting capabilities
+PASS: inline slider throttled preview, release commit, Escape/capture cancellation, keyboard steps and bounds
+PASS: conditional tray recovery and no user configuration writes
